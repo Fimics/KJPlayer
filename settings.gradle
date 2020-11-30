@@ -1,0 +1,6 @@
+include ':kjplayer'
+rootProject.name = "KJPlayer"
+
+//annotation
+include ':annotation:nav_annotation'
+include ':annotation:nav_processor'
