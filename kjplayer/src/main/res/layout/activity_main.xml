@@ -37,6 +37,7 @@
                 <!--app:layout_scrollFlags="scroll|enterAlways|snap"-->
             </com.google.android.material.appbar.AppBarLayout>
 
+            <!--NavHostFragment 界面真正的Fragment , app:defaultNavHost="true" 如果是true会拦截系统的返回键，如果是false是执行返回键的莫认行为-->
             <fragment
                 android:id="@+id/nav_host_fragment"
                 android:name="androidx.navigation.fragment.NavHostFragment"
@@ -48,6 +49,7 @@
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+        <!--侧滑栏导航-->
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
             android:layout_width="match_parent"
@@ -58,6 +60,7 @@
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
+    <!--底部栏导航-->
     <com.mic.kjplayer.navgraph.AppBottomBar
         android:id="@+id/nav_view_bottom"
         android:layout_width="match_parent"

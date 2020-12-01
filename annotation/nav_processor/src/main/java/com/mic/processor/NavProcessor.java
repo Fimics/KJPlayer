@@ -42,7 +42,7 @@ public class NavProcessor extends AbstractProcessor {
     private Messager messager;
     private Filer filer;
     private static final String OUTPUT_FILE_NAME = "destination.json";
-    private  String  projectName = "app_player";
+    private  String  projectName = "kjplayer";
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
         super.init(processingEnv);

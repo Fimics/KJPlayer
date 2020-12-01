@@ -83,7 +83,7 @@ ext {
             'fastjson'                 : 'com.alibaba:fastjson:1.2.59',
 
              //auto-service
-            'autoservice'              : 'com.google.auto.service:auto-service:1.0-rc6',
+            'autoservice'              : 'com.google.auto.service:auto-service:1.0-rc7',
 
 
             //EventBus

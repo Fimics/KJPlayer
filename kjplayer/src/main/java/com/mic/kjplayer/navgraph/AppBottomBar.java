@@ -34,7 +34,9 @@ public class AppBottomBar extends BottomNavigationView {
     public AppBottomBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        config = AppConfig.getBottomBarConfig();
+        if(config==null){
+            config = AppConfig.getBottomBarConfig();
+        }
 
         int[][] state = new int[2][];
         state[0] = new int[]{android.R.attr.state_selected};

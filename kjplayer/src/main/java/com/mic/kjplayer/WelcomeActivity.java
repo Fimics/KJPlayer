@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mic.kjplayer.navgraph.AppConfig;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     private static final int FUTURE = 100;
@@ -60,6 +62,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+//                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 MainActivity.start(WelcomeActivity.this);
                 finish();
             }

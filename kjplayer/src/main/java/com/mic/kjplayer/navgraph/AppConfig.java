@@ -1,6 +1,7 @@
 package com.mic.kjplayer.navgraph;
 
 import android.content.res.AssetManager;
+import android.util.Log;
 
 
 import com.alibaba.fastjson.JSON;
@@ -15,6 +16,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class AppConfig {
+    private static final String TAG = "appconfig";
     private static HashMap<String, Destination> sDestConfig;
     private static BottomBar sBottomBar;
     private static SofaTab sSofaTab, sFindTabConfig;
@@ -65,6 +67,7 @@ public class AppConfig {
     }
 
     private static String parseFile(String fileName) {
+        Log.d(TAG,fileName);
         AssetManager assets = AppGlobals.getApplication().getAssets();
         InputStream is = null;
         BufferedReader br = null;
