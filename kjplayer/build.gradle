@@ -32,16 +32,29 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation depends.appcompat
+    implementation depends.material
+    implementation depends.constraint
+    testImplementation depends.junit
+    androidTestImplementation depends.junitandroidx
+    androidTestImplementation depends.espresso
+
+    //navGraph
     implementation project(path: ':annotation:nav_annotation')
     annotationProcessor project(':annotation:nav_processor')
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
     implementation depends.fastjson
     api depends.navigationfragment
     api depends.navigation
+
+    //okHttp
+    implementation depends.okhttp
+    implementation depends.logginginterceptor
+
+    //room
+    implementation depends.roomruntime
+    annotationProcessor depends.roomcompiler
+
+    //lifecycle
+    implementation depends.lifecycleextensions
+    annotationProcessor depends.lifecyclecompiler
 }
