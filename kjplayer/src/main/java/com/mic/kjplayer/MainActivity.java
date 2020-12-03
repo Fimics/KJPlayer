@@ -24,7 +24,7 @@ import com.mic.kjplayer.navgraph.NavGraphBuilder;
 import com.mic.kjplayer.utils.StatusBarUtil;
 
 @SuppressWarnings("")
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout mDrawerLayout;
     private  ActionBar actionBar;
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_main);
         StatusBarUtil.setStatusBarColor(this, getResources().getColor(R.color.colorPrimary));
         initData();

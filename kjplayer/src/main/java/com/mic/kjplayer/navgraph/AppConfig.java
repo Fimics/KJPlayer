@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import com.mic.appcore.AppGlobals;
 
 public class AppConfig {
     private static final String TAG = "appconfig";

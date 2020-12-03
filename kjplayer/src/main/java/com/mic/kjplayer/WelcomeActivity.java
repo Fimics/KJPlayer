@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.mic.kjplayer.navgraph.AppConfig;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends BaseActivity {
 
     private static final int FUTURE = 100;
     private static final int INTERVAL = 100;

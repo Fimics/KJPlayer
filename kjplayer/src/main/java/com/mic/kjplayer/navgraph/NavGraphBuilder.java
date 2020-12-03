@@ -10,6 +10,8 @@ import androidx.navigation.NavGraphNavigator;
 import androidx.navigation.NavigatorProvider;
 import androidx.navigation.fragment.FragmentNavigator;
 
+import com.mic.appcore.AppGlobals;
+
 import java.util.HashMap;
 import java.util.Iterator;
 

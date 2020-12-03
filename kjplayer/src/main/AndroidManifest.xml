@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/XAppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".tabs.TabPublishActivity"></activity>
+        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".tabs.TabPublishActivity" />
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait"

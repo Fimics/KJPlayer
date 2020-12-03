@@ -9,10 +9,10 @@ ext {
     // 包名，用于存放APT生成的类文件
     packageNameForAPT = "com.mic.apt"
 
-    android = [compileSdkVersion   : 29,
-               buildToolsVersion   : "29.0.3",
-               minSdkVersion       : 26,
-               targetSdkVersion    : 26,
+    android = [compileSdkVersion   : 30,
+               buildToolsVersion   : "30.0.2",
+               minSdkVersion       : 21,
+               targetSdkVersion    : 30,
                versionCode         : 1,
                versionName         : '1.0.0',
                multiDexEnabled     : true,
@@ -32,17 +32,17 @@ ext {
             "release": "http://123.56.232.18:8080/serverdemo/"
     ]
 
-    appId = [
-            "app"         : "com.mic",
-            "home"        : "com.mic.home",
-            "sofa"        : "com.mic.sofa",
-            "publish"     : "com.mic.publish",
-            "find"        : "com.mic.find",
-            "user"        : "com.mic.user",
-            "demo"        : "com.mic",
-            "order"       : "com.mic.order",
-            "personal"    : "com.mic.personal"
-            ]
+//    appId = [
+//            "app"         : "com.mic",
+//            "home"        : "com.mic.home",
+//            "sofa"        : "com.mic.sofa",
+//            "publish"     : "com.mic.publish",
+//            "find"        : "com.mic.find",
+//            "user"        : "com.mic.user",
+//            "demo"        : "com.mic",
+//            "order"       : "com.mic.order",
+//            "personal"    : "com.mic.personal"
+//            ]
 
 
     dependencies = [

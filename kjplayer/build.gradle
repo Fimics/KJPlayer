@@ -2,20 +2,20 @@ plugins {
     id 'com.android.application'
 }
 
+// 赋值与引用
+def androids = rootProject.ext.android;
 def depends   = rootProject.ext.dependencies;
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
-
+    compileSdkVersion androids.compileSdkVersion
+    buildToolsVersion androids.buildToolsVersion
     defaultConfig {
         applicationId "com.mic.kjplayer"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdkVersion androids.minSdkVersion
+        targetSdkVersion androids.targetSdkVersion
+        versionCode androids.versionCode
+        versionName androids.versionName
+        testInstrumentationRunner  depends.testrunner
     }
 
     buildTypes {
@@ -42,19 +42,9 @@ dependencies {
     //navGraph
     implementation project(path: ':annotation:nav_annotation')
     annotationProcessor project(':annotation:nav_processor')
-    implementation depends.fastjson
     api depends.navigationfragment
     api depends.navigation
 
-    //okHttp
-    implementation depends.okhttp
-    implementation depends.logginginterceptor
+    api project(':kjcore:appbiz')
 
-    //room
-    implementation depends.roomruntime
-    annotationProcessor depends.roomcompiler
-
-    //lifecycle
-    implementation depends.lifecycleextensions
-    annotationProcessor depends.lifecyclecompiler
 }

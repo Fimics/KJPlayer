@@ -1,6 +1,13 @@
-include ':kjplayer'
+include ':kjcore:appbiz'
 rootProject.name = "KJPlayer"
+
+include ':kjplayer'
 
 //annotation
 include ':annotation:nav_annotation'
 include ':annotation:nav_processor'
+
+include ':kjcore:kjokhttp'
+include ':kjcore:kjroom'
+include ':kjcore:appcore'
+

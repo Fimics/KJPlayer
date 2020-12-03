@@ -1,4 +1,4 @@
-package com.mic.kjplayer.navgraph;
+package com.mic.appcore;
 
 import android.app.Application;
 
