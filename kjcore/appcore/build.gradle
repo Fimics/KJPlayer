@@ -38,4 +38,11 @@ dependencies {
     testImplementation depends.junit
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
+
+    //aliyun oss
+    api depends.aliyunoos
+    api depends.navigationfragment
+
+    //paging分页组件
+    api depends.pagingruntime
 }

@@ -1,4 +1,4 @@
-package com.mic.kjplayer.navgraph;
+package com.mic.kjplayer.model;
 
 import java.util.List;
 

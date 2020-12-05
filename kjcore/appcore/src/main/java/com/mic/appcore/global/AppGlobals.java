@@ -1,4 +1,4 @@
-package com.mic.appcore;
+package com.mic.appcore.global;
 
 import android.app.Application;
 

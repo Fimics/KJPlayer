@@ -4,7 +4,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.mic.appcore.AppGlobals;
+import com.mic.appcore.global.AppGlobals;
 
 @Database(entities = {Cache.class}, version = 1)
 //数据读取、存储时数据转换器,比如将写入时将Date转换成Long存储，读取时把Long转换Date返回
@@ -32,6 +32,7 @@ public abstract class CacheDatabase extends RoomDatabase {
                 //.fallbackToDestructiveMigrationFrom()
                 // .addMigrations(CacheDatabase.sMigration)
                 .build();
+
 
     }
 

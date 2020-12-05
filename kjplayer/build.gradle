@@ -49,6 +49,12 @@ dependencies {
     api depends.navigationfragment
     api depends.navigation
 
+    //图片
+    api depends.glide
+    api depends.glidetransformations
+    annotationProcessor depends.glidecompiler
+    api depends.photoView
+
     api project(':kjcore:appbiz')
 
 }
