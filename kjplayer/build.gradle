@@ -43,6 +43,14 @@ dependencies {
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
 
+    if (gradle.hasProperty('exoplayerRoot')) {
+        implementation project(':library-core')
+        implementation project(':library-dash')
+        implementation project(':library-hls')
+        implementation project(':library-ui')
+        implementation project(':extension-ima')
+    }
+
     //navGraph
     implementation project(path: ':annotation:nav_annotation')
     annotationProcessor project(':annotation:nav_processor')

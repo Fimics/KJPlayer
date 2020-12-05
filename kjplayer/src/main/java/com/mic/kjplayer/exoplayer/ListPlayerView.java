@@ -20,11 +20,9 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
-import com.mooc.libcommon.utils.PixUtils;
-import com.mooc.ppjoke.R;
-import com.mooc.ppjoke.exoplayer.IPlayTarget;
-import com.mooc.ppjoke.exoplayer.PageListPlay;
-import com.mooc.ppjoke.exoplayer.PageListPlayManager;
+import com.mic.appcore.utils.PixUtils;
+import com.mic.kjplayer.R;
+import com.mic.kjplayer.view.PPImageView;
 
 /**
  * 列表视频播放专用
@@ -171,7 +169,7 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
             if (parent != null) {
                 ((ViewGroup) parent).removeView(playerView);
                 //还应该暂停掉列表上正在播放的那个
-                ((com.mooc.ppjoke.view.ListPlayerView) parent).inActive();
+                ((ListPlayerView) parent).inActive();
             }
 
             ViewGroup.LayoutParams coverParams = cover.getLayoutParams();
@@ -200,7 +198,8 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
             pageListPlay.playUrl = mVideoUrl;
         }
         controlView.show();
-        controlView.setVisibilityListener(this);
+//        controlView.setVisibilityListener(this);
+          controlView.addVisibilityListener(null);
         exoPlayer.addListener(this);
         exoPlayer.setPlayWhenReady(true);
 
@@ -224,7 +223,8 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
         if (pageListPlay.exoPlayer == null || pageListPlay.controlView == null || pageListPlay.exoPlayer == null)
             return;
         pageListPlay.exoPlayer.setPlayWhenReady(false);
-        pageListPlay.controlView.setVisibilityListener(null);
+//        pageListPlay.controlView.setVisibilityListener(null);
+         pageListPlay.controlView.addVisibilityListener(null);
         pageListPlay.exoPlayer.removeListener(this);
         cover.setVisibility(VISIBLE);
         playBtn.setVisibility(VISIBLE);
