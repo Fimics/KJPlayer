@@ -48,13 +48,13 @@ dependencies {
     implementation depends.buglycrashreport
     implementation depends.buglynativecrashreport
 
-//    if (gradle.hasProperty('exoplayerRoot')) {
-//        implementation project(':library-core')
-//        implementation project(':library-dash')
-//        implementation project(':library-hls')
-//        implementation project(':library-ui')
-//        implementation project(':extension-ima')
-//    }
+    if (gradle.hasProperty('exoplayerRoot')) {
+        implementation project(':library-core')
+        implementation project(':library-dash')
+        implementation project(':library-hls')
+        implementation project(':library-ui')
+        implementation project(':extension-ima')
+    }
 
     //navGraph
     implementation project(path: ':annotation:nav_annotation')
