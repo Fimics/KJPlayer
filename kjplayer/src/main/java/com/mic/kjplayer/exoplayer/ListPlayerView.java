@@ -57,7 +57,7 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
         bufferView = findViewById(R.id.buffer_view);
         //封面view
         cover = findViewById(R.id.cover);
-        //高斯模糊背景图,防止出现两边留嘿
+        //视频的 宽度小于高度时 高斯模糊背景图,防止出现两边留嘿
         blur = findViewById(R.id.blur_background);
         //播放盒暂停的按钮
         playBtn = findViewById(R.id.play_btn);

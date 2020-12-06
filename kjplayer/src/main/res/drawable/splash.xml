@@ -10,6 +10,6 @@
         android:width="150dp"
         android:height="150dp"
         android:gravity="center">
-        <bitmap android:src="@mipmap/icon_jetpack"></bitmap>
+        <bitmap android:src="@drawable/ic_launcher"></bitmap>
     </item>
 </layer-list>

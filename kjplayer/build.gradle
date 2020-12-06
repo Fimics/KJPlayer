@@ -43,26 +43,26 @@ dependencies {
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
 
-    if (gradle.hasProperty('exoplayerRoot')) {
-        implementation project(':library-core')
-        implementation project(':library-dash')
-        implementation project(':library-hls')
-        implementation project(':library-ui')
-        implementation project(':extension-ima')
-    }
+
+    //错误收集
+    implementation depends.buglycrashreport
+    implementation depends.buglynativecrashreport
+
+//    if (gradle.hasProperty('exoplayerRoot')) {
+//        implementation project(':library-core')
+//        implementation project(':library-dash')
+//        implementation project(':library-hls')
+//        implementation project(':library-ui')
+//        implementation project(':extension-ima')
+//    }
 
     //navGraph
     implementation project(path: ':annotation:nav_annotation')
     annotationProcessor project(':annotation:nav_processor')
-    api depends.navigationfragment
-    api depends.navigation
+    implementation project(':appcore')
 
-    //图片
-    api depends.glide
-    api depends.glidetransformations
-    annotationProcessor depends.glidecompiler
-    api depends.photoView
-
-    api project(':kjcore:appbiz')
+//    implementation "androidx.core:core-ktx:+"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 }

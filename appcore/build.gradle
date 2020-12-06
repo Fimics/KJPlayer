@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.library'
+}
+
+// 赋值与引用
+def androids = rootProject.ext.android;
+def depends   = rootProject.ext.dependencies;
+
+android {
+    compileSdkVersion androids.compileSdkVersion
+    buildToolsVersion androids.buildToolsVersion
+    defaultConfig {
+        minSdkVersion androids.minSdkVersion
+        targetSdkVersion androids.targetSdkVersion
+        versionCode androids.versionCode
+        versionName androids.versionName
+        testInstrumentationRunner  depends.testrunner
+
+        javaCompileOptions{
+            annotationProcessorOptions{
+                arguments=["room.schemaLocation":"$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation depends.appcompat
+    implementation depends.material
+    implementation depends.constraint
+    testImplementation depends.junit
+    androidTestImplementation depends.junitandroidx
+    androidTestImplementation depends.espresso
+
+    //navigation导航
+    api depends.navigationfragment
+    api depends.navigation
+
+    //okhttp
+    implementation depends.okhttp
+    implementation depends.logginginterceptor
+    implementation depends.fastjson
+
+    //room
+    api depends.roomruntime
+    api depends.lifecycleextensions
+    annotationProcessor depends.roomcompiler
+    annotationProcessor depends.lifecyclecompiler
+
+    //包含了 viewmodel 和 livedata
+    api depends.lifecycleextensions
+    //注解使用生命周期编译器
+    annotationProcessor depends.lifecyclecompiler
+    //或者指明使用viewmodel
+    //api "androidx.lifecycle:lifecycle-viewmodel:2.1.0"
+    //或者指明使用livedata
+    //api 'androidx.lifecycle:lifecycle-livedata:2.1.0'
+    //api 'androidx.lifecycle:lifecycle-livedata-core:2.1.0'
+
+    //paging分页组件
+    api depends.pagingruntime
+    //页面刷新组件
+    api depends.pageSmartRefreshLayout
+    api depends.SmartRefreshHeader
+    //viewpager2 可以禁止预加载
+    api depends.viewpager2
+
+
+    //图片加载
+    api depends.glide
+    api depends.glidetransformations
+    annotationProcessor depends.glidecompiler
+    api depends.photoView
+
+    //camera
+    api depends.cameracore
+    api depends.cameracamera2
+    api depends.cameraview
+    api depends.cameraextensions
+
+    //workmanager
+    api depends.workmanager
+
+    //aliyun oss
+    api depends.aliyunoos
+
+
+//    implementation "androidx.core:core-ktx:+"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}

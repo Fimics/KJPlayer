@@ -1,13 +1,12 @@
 def debug = true
 
 
-if(debug){
-    gradle.ext.exoplayerRoot = 'submodule/ExoPlayer'
-//    gradle.ext.exoplayerModulePrefix = 'exoplayer-'
-    apply from: new File(gradle.ext.exoplayerRoot, 'core_settings.gradle')
-}
+//if(debug){
+//    gradle.ext.exoplayerRoot = 'submodule/ExoPlayer'
+////    gradle.ext.exoplayerModulePrefix = 'exoplayer-'
+//    apply from: new File(gradle.ext.exoplayerRoot, 'core_settings.gradle')
+//}
 
-include ':kjcore:appbiz'
 rootProject.name = "KJPlayer"
 
 include ':kjplayer'
@@ -16,7 +15,5 @@ include ':kjplayer'
 include ':annotation:nav_annotation'
 include ':annotation:nav_processor'
 
-include ':kjcore:kjokhttp'
-include ':kjcore:kjroom'
-include ':kjcore:appcore'
+include ':appcore'
 

@@ -47,24 +47,6 @@ ext {
 
     dependencies = [
 
-
-            //系统
-            'appcompat'                :'androidx.appcompat:appcompat:1.2.0',
-            'constraint'               :'androidx.constraintlayout:constraintlayout:2.0.4',
-            'vectordrawable'           :'androidx.vectordrawable:vectordrawable:1.0.1',
-            'navigationfragment'       :'androidx.navigation:navigation-fragment:2.0.0',
-            'navigation'               :'androidx.navigation:navigation-ui:2.0.0',
-            'legacy'                   :'androidx.legacy:legacy-support-v4:1.0.0',
-            'recyclerview'             :'androidx.recyclerview:recyclerview:1.0.0',
-            'cardview'                 :'androidx.cardview:cardview:1.0.0',
-            'material'                 :'com.google.android.material:material:1.2.1',
-
-            //图片加载
-            'glide'                    :'com.github.bumptech.glide:glide:4.9.0',
-            'glidetransformations'     :'jp.wasabeef:glide-transformations:4.0.0',
-            'glidecompiler'            :'com.github.bumptech.glide:compiler:4.9.0',
-            'photoView'                :'com.github.chrisbanes:PhotoView:2.3.0@aar',
-
             //RX
             'rxjava'                   : 'io.reactivex.rxjava2:rxjava:2.1.7',
             'rxandroid'                : 'io.reactivex.rxjava2:rxandroid:2.0.1',
@@ -72,34 +54,44 @@ ext {
             'rxbinding2'               : 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
             'rxpermissions2'           : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar',
 
-           //网络与框架
-            'okhttp'                   : 'com.squareup.okhttp3:okhttp:4.2.0',
-
             //数据
             'retrofit'                 : 'com.squareup.retrofit2:retrofit:2.3.0',
             'convertergson'            : 'com.squareup.retrofit2:converter-gson:2.3.0',
-            'logginginterceptor'       : 'com.squareup.okhttp3:logging-interceptor:+',
             'gson'                     : 'com.google.code.gson:gson:2.6.2',
-            'fastjson'                 : 'com.alibaba:fastjson:1.2.59',
 
-             //auto-service
+            //auto-service
             'autoservice'              : 'com.google.auto.service:auto-service:1.0-rc7',
-
 
             //EventBus
             'eventbus'                 : 'org.greenrobot:eventbus:3.1.1',
             'eventbusprocessor'        : 'org.greenrobot:eventbus-annotation-processor:3.1.1',
             'javapoet'                 : 'com.squareup:javapoet:1.9.0',
-
-
             //multidex
             'multidex'                 :'com.android.support:multidex:1.1.0',
+//------------------------------------------------------------------------------------------------------------------
+            //系统
+            'appcompat'                :'androidx.appcompat:appcompat:1.2.0',
+            'constraint'               :'androidx.constraintlayout:constraintlayout:2.0.4',
+            'vectordrawable'           :'androidx.vectordrawable:vectordrawable:1.0.1',
+            'legacy'                   :'androidx.legacy:legacy-support-v4:1.0.0',
+            'recyclerview'             :'androidx.recyclerview:recyclerview:1.0.0',
+            'cardview'                 :'androidx.cardview:cardview:1.0.0',
+            'material'                 :'com.google.android.material:material:1.2.1',
 
             //test
             'testrunner'               :'androidx.test.runner.AndroidJUnitRunner',
             'junit'                    :'junit:junit:4.12',
             'junitandroidx'            :'androidx.test.ext:junit:1.1.2',
             'espresso'                 :'androidx.test.espresso:espresso-core:3.3.0',
+
+            //navigation
+            'navigationfragment'       :'androidx.navigation:navigation-fragment:2.0.0',
+            'navigation'               :'androidx.navigation:navigation-ui:2.0.0',
+
+            //网络与框架
+            'okhttp'                   : 'com.squareup.okhttp3:okhttp:4.2.0',
+            'logginginterceptor'       : 'com.squareup.okhttp3:logging-interceptor:+',
+            'fastjson'                 : 'com.alibaba:fastjson:1.2.59',
 
             //room数据库
             'roomruntime'              :'android.arch.persistence.room:runtime:1.1.1',
@@ -109,6 +101,8 @@ ext {
 
             //包含了 viewmodel 和 livedata
             'lifecycleextensions'      :'androidx.lifecycle:lifecycle-extensions:2.1.0',
+            'lifecyclecompiler'      :'androidx.lifecycle:lifecycle-compiler:2.1.0',
+
             //paging分页组件
             'pagingruntime'            :'androidx.paging:paging-runtime:2.1.0',
             'pageSmartRefreshLayout'   :'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0',
@@ -116,15 +110,21 @@ ext {
             //viewpager2 可以禁止预加载
             'viewpager2'               :"androidx.viewpager2:viewpager2:1.0.0-beta04",
 
-            //错误收集
-            'buglycrashreport'         : 'com.tencent.bugly:crashreport:latest.release',
-            'buglynativecrashreport'   : 'com.tencent.bugly:nativecrashreport:latest.release',
+            //图片加载
+            'glide'                    :'com.github.bumptech.glide:glide:4.9.0',
+            'glidetransformations'     :'jp.wasabeef:glide-transformations:4.0.0',
+            'glidecompiler'            :'com.github.bumptech.glide:compiler:4.9.0',
+            'photoView'                :'com.github.chrisbanes:PhotoView:2.3.0@aar',
 
             //camera
             'cameracore'               :'androidx.camera:camera-core:1.0.0-alpha04',
             'cameracamera2'            :'androidx.camera:camera-camera2:1.0.0-alpha04',
             'cameraview'               :'androidx.camera:camera-view:1.0.0-alpha01',
             'cameraextensions'         :'androidx.camera:camera-extensions:1.0.0-alpha01',
+
+            //错误收集
+            'buglycrashreport'         : 'com.tencent.bugly:crashreport:latest.release',
+            'buglynativecrashreport'   : 'com.tencent.bugly:nativecrashreport:latest.release',
 
             //workmanager
             'workmanager'              :'androidx.work:work-runtime:2.2.0',
