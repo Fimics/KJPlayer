@@ -1,17 +1,17 @@
 {
-  "activeColor": "#2E8B57",
-  "inActiveColor": "#3c8cf0",
+  "activeColor": "#00FF00",
+  "inActiveColor": "#FFFFFF",
   "selectTab": 0,
   "tabs": [
     {
-      "size": 24,
+      "size": 26,
       "enable": true,
       "index": 0,
       "pageUrl": "main/tabs/home",
       "title": "首页"
     },
     {
-      "size": 24,
+      "size": 26,
       "enable": true,
       "index": 1,
       "pageUrl": "main/tabs/sofa",
@@ -21,19 +21,19 @@
       "size": 40,
       "enable": true,
       "index": 2,
-      "tintColor": "#ff678f",
+      "tintColor": "#00FF00",
       "pageUrl": "main/tabs/publish",
       "title": ""
     },
     {
-      "size": 24,
+      "size": 26,
       "enable": true,
       "index": 3,
       "pageUrl": "main/tabs/find",
       "title": "发现"
     },
     {
-      "size": 24,
+      "size": 26,
       "enable": true,
       "index": 4,
       "pageUrl": "main/tabs/user",
