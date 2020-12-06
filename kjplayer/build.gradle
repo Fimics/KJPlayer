@@ -68,6 +68,7 @@ dependencies {
     annotationProcessor project(':annotation:nav_processor')
     implementation project(':appcore')
 
+//    implementation depends.androidxcore
     //kotlin
     depends.kotlins.each {
         implementation it;

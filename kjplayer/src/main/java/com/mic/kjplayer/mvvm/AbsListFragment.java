@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui;
+package com.mic.kjplayer.mvvm;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -84,6 +84,7 @@ public abstract class AbsListFragment<T, M extends AbsViewModel<T>> extends Frag
         }
     }
 
+    //每次下来刷新回来的数据（PagedList）
     public void submitList(PagedList<T> result) {
         //只有当新数据集合大于0 的时候，才调用adapter.submitList
         //否则可能会出现 页面----有数据----->被清空-----空布局

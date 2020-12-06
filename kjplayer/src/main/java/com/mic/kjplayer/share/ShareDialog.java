@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.share;
+package com.mic.kjplayer.share;
 
 import android.content.ComponentName;
 import android.content.Context;
