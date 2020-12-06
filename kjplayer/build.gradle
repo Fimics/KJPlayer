@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
 }
 
 // 赋值与引用
@@ -28,6 +29,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
     dataBinding{
         enabled=true
@@ -48,6 +52,9 @@ dependencies {
     implementation depends.buglycrashreport
     implementation depends.buglynativecrashreport
 
+    //QQ快捷登录
+    implementation files('libs/open_sdk_r6140_lite.jar')
+
     if (gradle.hasProperty('exoplayerRoot')) {
         implementation project(':library-core')
         implementation project(':library-dash')
@@ -61,8 +68,8 @@ dependencies {
     annotationProcessor project(':annotation:nav_processor')
     implementation project(':appcore')
 
-//    implementation "androidx.core:core-ktx:+"
-//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
-//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
+    //kotlin
+    depends.kotlins.each {
+        implementation it;
+    }
 }

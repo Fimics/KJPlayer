@@ -13,6 +13,8 @@ import androidx.navigation.fragment.FragmentNavigator;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import static com.mic.appcore.global.AppGlobals.getApplication;
+
 public class NavGraphBuilder {
     public static void build(FragmentActivity activity, NavController controller, int containerId) {
         NavigatorProvider provider = controller.getNavigatorProvider();
@@ -39,7 +41,7 @@ public class NavGraphBuilder {
             } else {
                 ActivityNavigator.Destination destination = activityNavigator.createDestination();
                 destination.setId(node.id);
-                destination.setComponentName(new ComponentName(AppGlobals.getApplication().getPackageName(), node.className));
+                destination.setComponentName(new ComponentName(getApplication().getPackageName(), node.className));
                 destination.addDeepLink(node.pageUrl);
                 navGraph.addDestination(destination);
             }

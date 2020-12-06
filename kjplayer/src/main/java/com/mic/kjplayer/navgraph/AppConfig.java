@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
+import com.mic.appcore.global.AppGlobals;
 import com.mic.kjplayer.model.SofaTab;
 
 public class AppConfig {
