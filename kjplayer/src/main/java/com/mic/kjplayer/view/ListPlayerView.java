@@ -202,7 +202,7 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
         controlView.show();
 //        controlView.setVisibilityListener(this);
         //TODO
-        controlView.addVisibilityListener(null);
+        //controlView.addVisibilityListener(null);
         exoPlayer.addListener(this);
         exoPlayer.setPlayWhenReady(true);
 
@@ -228,7 +228,7 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
         pageListPlay.exoPlayer.setPlayWhenReady(false);
         //TODO
 //        pageListPlay.controlView.setVisibilityListener(null);
-        pageListPlay.controlView.addVisibilityListener(null);
+        //pageListPlay.controlView.addVisibilityListener(null);
         pageListPlay.exoPlayer.removeListener(this);
         cover.setVisibility(VISIBLE);
         playBtn.setVisibility(VISIBLE);
