@@ -63,7 +63,7 @@
         </activity>
 
         <activity
-            android:name=".ui.detail.FeedDetailActivity"
+            android:name=".detail.FeedDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/feedDetail">
         </activity>

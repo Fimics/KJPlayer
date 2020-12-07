@@ -23,7 +23,7 @@ import com.mic.kjplayer.databinding.LayoutFeedTypeImageBinding;
 import com.mic.kjplayer.databinding.LayoutFeedTypeVideoBinding;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.ui.InteractionPresenter;
-import com.mic.kjplayer.ui.detail.FeedDetailActivity;
+import com.mic.kjplayer.detail.FeedDetailActivity;
 import com.mic.kjplayer.exoplayer.ListPlayerView;
 
 public class FeedAdapter extends AbsPagedListAdapter<Feed, FeedAdapter.ViewHolder> {
