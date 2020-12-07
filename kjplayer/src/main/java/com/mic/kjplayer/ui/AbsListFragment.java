@@ -26,6 +26,8 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
+import com.mic.kjplayer.R;
+
 public abstract class AbsListFragment<T, M extends AbsViewModel<T>> extends Fragment implements OnRefreshListener, OnLoadMoreListener {
     protected LayoutRefreshViewBinding binding;
     protected RecyclerView mRecyclerView;

@@ -22,7 +22,8 @@
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:transitionName="cover"></com.mic.kjplayer.view.PPImageView>
+        android:transitionName="cover">
+    </com.mic.kjplayer.view.PPImageView>
 
 
     <ImageView
@@ -31,7 +32,7 @@
         android:layout_height="@dimen/dp_40"
         android:layout_gravity="center"
         android:src="@drawable/icon_video_play"
-        android:transitionName="play_btn"></ImageView>
+        android:transitionName="play_btn"/>
 
 
     <!--    视频播放时的底部进度条-->
