@@ -71,10 +71,10 @@
         <activity android:name=".ui.find.TagFeedListActivity">
         </activity>
 
-        <activity android:name=".ui.my.ProfileActivity">
+        <activity android:name=".my.ProfileActivity">
         </activity>
 
-        <activity android:name=".ui.my.UserBehaviorListActivity">
+        <activity android:name=".my.UserBehaviorListActivity">
         </activity>
 
 

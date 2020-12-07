@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.my;
+package com.mic.kjplayer.my;
 
 import android.content.Context;
 import android.content.Intent;
