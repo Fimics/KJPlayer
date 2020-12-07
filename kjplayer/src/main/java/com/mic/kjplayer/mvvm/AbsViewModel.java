@@ -20,17 +20,17 @@ public abstract class AbsViewModel<T> extends ViewModel {
     public AbsViewModel() {
 
         config = new PagedList.Config.Builder()
-                .setPageSize(10)
-                .setInitialLoadSizeHint(12)
-                // .setMaxSize(100)；
+                .setPageSize(10) //每次分页需要加载的数量
+                .setInitialLoadSizeHint(12)//第一次加载数据时的数量
+                // .setMaxSize(100)；//列表一共有多少条数据
                 // .setEnablePlaceholders(false)
-                // .setPrefetchDistance()
+                // .setPrefetchDistance()//距离屏幕底部还有几个item去加载下一页数据
                 .build();
 
         pageData = new LivePagedListBuilder(factory, config)
-                .setInitialLoadKey(0)
-                //.setFetchExecutor()
-                .setBoundaryCallback(callback)
+                .setInitialLoadKey(0)//初始化数据需要传递的参数
+                //.setFetchExecutor() //默认会调用
+                .setBoundaryCallback(callback)//能够检测到pageList数据加载的状态
                 .build();
     }
 

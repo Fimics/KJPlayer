@@ -74,6 +74,7 @@ public abstract class AbsListFragment<T, M extends AbsViewModel<T>> extends Frag
         if (arguments.length > 1) {
             Type argument = arguments[1];
             Class modelClaz = ((Class) argument).asSubclass(AbsViewModel.class);
+            //得到泛型传递进来的子类
             mViewModel = (M) ViewModelProviders.of(this).get(modelClaz);
 
             //触发页面初始化数据加载的逻辑

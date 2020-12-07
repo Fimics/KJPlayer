@@ -29,6 +29,7 @@ import com.mic.kjplayer.exoplayer.ListPlayerView;
 public class FeedAdapter extends AbsPagedListAdapter<Feed, FeedAdapter.ViewHolder> {
     private final LayoutInflater inflater;
     protected Context mContext;
+    //播放器需要根据数据类型来执行视频的播放，暂停
     protected String mCategory;
 
     public FeedAdapter(Context context, String category) {
