@@ -1,4 +1,4 @@
-package com.mic.kjplayer.utils;
+package com.mic.appcore.utils;
 
 import android.graphics.Color;
 import android.graphics.Typeface;

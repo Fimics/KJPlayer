@@ -16,7 +16,7 @@ import com.mic.kjplayer.ui.InteractionPresenter;
 import com.mic.kjplayer.ui.MutableItemKeyedDataSource;
 import com.mic.kjplayer.ui.home.FeedAdapter;
 import com.mic.kjplayer.ui.login.UserManager;
-import com.mic.kjplayer.utils.TimeUtils;
+import com.mic.appcore.utils.TimeUtils;
 
 public class ProfileListAdapter extends FeedAdapter {
     public ProfileListAdapter(Context context, String category) {

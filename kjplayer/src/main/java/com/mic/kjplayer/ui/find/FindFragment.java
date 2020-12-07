@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.mic.annotation.FragmentDestination;
 import com.mic.kjplayer.model.SofaTab;
 import com.mic.kjplayer.ui.sofa.SofaFragment;
-import com.mic.kjplayer.utils.AppConfig;
+import com.mic.kjplayer.navigator.AppConfig;
 
 
 @FragmentDestination(pageUrl = "main/tabs/find")

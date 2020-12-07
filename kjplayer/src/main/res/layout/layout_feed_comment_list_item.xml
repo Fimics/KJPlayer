@@ -15,7 +15,7 @@
 
         <import type="com.mic.kjplayer.ui.login.UserManager"/>
 
-        <import type="com.mic.kjplayer.utils.TimeUtils"/>
+        <import type="com.mic.appcore.utils.TimeUtils"/>
 
         <import type="com.mic.kjplayer.ui.InteractionPresenter"/>
 

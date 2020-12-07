@@ -9,7 +9,7 @@
             name="user"
             type="com.mic.kjplayer.model.User" />
 
-        <import type="com.mic.kjplayer.utils.StringConvert"/>
+        <import type="com.mic.appcore.utils.StringConvert"/>
 
     </data>
 

@@ -21,7 +21,7 @@ import com.mic.annotation.FragmentDestination;
 import com.mic.kjplayer.databinding.FragmentSofaBinding;
 import com.mic.kjplayer.model.SofaTab;
 import com.mic.kjplayer.ui.home.HomeFragment;
-import com.mic.kjplayer.utils.AppConfig;
+import com.mic.kjplayer.navigator.AppConfig;
 
 import java.util.ArrayList;
 import java.util.List;

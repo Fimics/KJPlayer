@@ -11,9 +11,6 @@ import androidx.navigation.NavigatorProvider;
 import androidx.navigation.fragment.FragmentNavigator;
 
 import com.mic.appcore.global.AppGlobals;
-import com.mic.kjplayer.navigator.Destination;
-import com.mic.kjplayer.navigator.FixFragmentNavigator;
-import com.mic.kjplayer.utils.AppConfig;
 
 import java.util.HashMap;
 import java.util.Iterator;

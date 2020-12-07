@@ -1,4 +1,4 @@
-package com.mic.kjplayer.view;
+package com.mic.kjplayer.navigator;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,9 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.mic.kjplayer.R;
-import com.mic.kjplayer.navigator.BottomBar;
-import com.mic.kjplayer.navigator.Destination;
-import com.mic.kjplayer.utils.AppConfig;
 
 import java.util.List;
 

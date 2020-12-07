@@ -1,4 +1,4 @@
-package com.mic.kjplayer.utils;
+package com.mic.kjplayer.navigator;
 
 import android.content.res.AssetManager;
 
