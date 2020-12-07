@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.publish;
+package com.mic.kjplayer.publish;
 
 import android.content.Context;
 import android.text.TextUtils;

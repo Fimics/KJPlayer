@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.publish;
+package com.mic.kjplayer.publish;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

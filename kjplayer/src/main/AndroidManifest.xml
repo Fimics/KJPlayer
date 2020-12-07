@@ -43,18 +43,18 @@
             android:required="false" />
 
         <activity
-            android:name=".ui.publish.PublishActivity"
+            android:name=".publish.PublishActivity"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name=".ui.publish.CaptureActivity"
+            android:name=".publish.CaptureActivity"
             android:screenOrientation="portrait"
             android:theme="@style/capture">
         </activity>
 
         <activity
-            android:name=".ui.publish.PreviewActivity"
+            android:name=".publish.PreviewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/preview">
         </activity>

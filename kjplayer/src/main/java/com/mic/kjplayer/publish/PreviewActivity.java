@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.publish;
+package com.mic.kjplayer.publish;
 
 import android.app.Activity;
 import android.content.Intent;
