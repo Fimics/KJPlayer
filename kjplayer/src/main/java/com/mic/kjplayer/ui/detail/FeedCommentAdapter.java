@@ -20,7 +20,7 @@ import com.mic.kjplayer.databinding.LayoutFeedCommentListItemBinding;
 import com.mic.kjplayer.model.Comment;
 import com.mic.kjplayer.ui.InteractionPresenter;
 import com.mic.kjplayer.mvvm.MutableItemKeyedDataSource;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 import com.mic.kjplayer.ui.publish.PreviewActivity;
 
 public class FeedCommentAdapter extends AbsPagedListAdapter<Comment, FeedCommentAdapter.ViewHolder> {

@@ -9,7 +9,7 @@ import com.mic.kjokhttp.ApiResponse;
 import com.mic.kjokhttp.ApiService;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.mvvm.AbsViewModel;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 
 import java.util.ArrayList;
 import java.util.Collections;

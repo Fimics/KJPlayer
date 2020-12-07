@@ -32,7 +32,7 @@ import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.ActivityLayoutPublishBinding;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.model.TagList;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 
 import org.jetbrains.annotations.NotNull;
 

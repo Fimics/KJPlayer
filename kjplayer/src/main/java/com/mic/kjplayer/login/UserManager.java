@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.login;
+package com.mic.kjplayer.login;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

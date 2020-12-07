@@ -36,7 +36,7 @@ import com.mic.kjokhttp.JsonCallback;
 import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.LayoutCommentDialogBinding;
 import com.mic.kjplayer.model.Comment;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 import com.mic.kjplayer.ui.publish.CaptureActivity;
 
 import java.util.concurrent.atomic.AtomicInteger;

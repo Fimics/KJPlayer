@@ -59,7 +59,7 @@
             android:theme="@style/preview">
         </activity>
 
-        <activity android:name=".ui.login.LoginActivity">
+        <activity android:name=".login.LoginActivity">
         </activity>
 
         <activity

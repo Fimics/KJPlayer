@@ -23,7 +23,7 @@ import com.mic.kjplayer.model.Comment;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.model.TagList;
 import com.mic.kjplayer.model.User;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 import com.mic.kjplayer.ui.share.ShareDialog;
 
 import org.jetbrains.annotations.NotNull;

@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.login;
+package com.mic.kjplayer.login;
 
 import android.content.Intent;
 import android.os.Bundle;

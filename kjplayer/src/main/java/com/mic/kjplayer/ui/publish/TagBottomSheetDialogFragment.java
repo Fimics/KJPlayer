@@ -25,7 +25,7 @@ import com.mic.kjokhttp.ApiService;
 import com.mic.kjokhttp.JsonCallback;
 import com.mic.kjplayer.R;
 import com.mic.kjplayer.model.TagList;
-import com.mic.kjplayer.ui.login.UserManager;
+import com.mic.kjplayer.login.UserManager;
 
 import java.util.ArrayList;
 import java.util.List;
