@@ -24,7 +24,7 @@ import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.model.TagList;
 import com.mic.kjplayer.model.User;
 import com.mic.kjplayer.login.UserManager;
-import com.mic.kjplayer.ui.share.ShareDialog;
+import com.mic.kjplayer.share.ShareDialog;
 
 import org.jetbrains.annotations.NotNull;
 
