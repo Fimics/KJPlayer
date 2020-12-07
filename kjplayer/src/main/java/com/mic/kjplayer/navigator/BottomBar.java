@@ -1,4 +1,4 @@
-package com.mic.kjplayer.model;
+package com.mic.kjplayer.navigator;
 
 import java.util.List;
 

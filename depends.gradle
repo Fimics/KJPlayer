@@ -9,10 +9,10 @@ ext {
     // 包名，用于存放APT生成的类文件
     packageNameForAPT = "com.mic.apt"
 
-    android = [compileSdkVersion   : 30,
-               buildToolsVersion   : "30.0.2",
+    android = [compileSdkVersion   : 29,
+               buildToolsVersion   : "29.0.3",
                minSdkVersion       : 21,
-               targetSdkVersion    : 30,
+               targetSdkVersion    : 29,
                versionCode         : 1,
                versionName         : '1.0.0',
                multiDexEnabled     : true,
@@ -123,8 +123,8 @@ ext {
             'cameraextensions'         :'androidx.camera:camera-extensions:1.0.0-alpha01',
 
             //错误收集
-            'buglycrashreport'         : 'com.tencent.bugly:crashreport:latest.release',
-            'buglynativecrashreport'   : 'com.tencent.bugly:nativecrashreport:latest.release',
+//            'buglycrashreport'         : 'com.tencent.bugly:crashreport:latest.release',
+//            'buglynativecrashreport'   : 'com.tencent.bugly:nativecrashreport:latest.release',
 
             //workmanager
             'workmanager'              :'androidx.work:work-runtime:2.2.0',

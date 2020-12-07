@@ -17,7 +17,7 @@ import com.mic.kjplayer.databinding.FragmentMyBinding;
 import com.mic.kjplayer.model.User;
 import com.mic.kjplayer.ui.login.UserManager;
 
-@FragmentDestination(pageUrl = "main/tabs/my", needLogin = true)
+@FragmentDestination(pageUrl = "main/tabs/my", needLogin = false)
 public class MyFragment extends Fragment {
     private FragmentMyBinding mBinding;
 

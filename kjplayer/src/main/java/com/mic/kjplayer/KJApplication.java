@@ -3,7 +3,6 @@ package com.mic.kjplayer;
 import android.app.Application;
 
 import com.mic.kjokhttp.ApiService;
-import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * 咱们的服务器已经部署到公网了.
@@ -20,6 +19,6 @@ public class KJApplication extends Application {
         super.onCreate();
         ApiService.init("http://123.56.232.18:8080/serverdemo", null);
 
-        CrashReport.initCrashReport(getApplicationContext(), "eb455a94a3", true);
+        //CrashReport.initCrashReport(getApplicationContext(), "eb455a94a3", true);
     }
 }

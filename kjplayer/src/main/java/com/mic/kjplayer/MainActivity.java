@@ -18,7 +18,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.mic.appcore.utils.StatusBarUtil;
-import com.mic.kjplayer.utils.NavGraphBuilder;
+import com.mic.kjplayer.navigator.NavGraphBuilder;
 
 @SuppressWarnings("")
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener{

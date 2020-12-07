@@ -5,8 +5,8 @@ import android.content.res.AssetManager;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.mic.appcore.global.AppGlobals;
-import com.mic.kjplayer.model.BottomBar;
-import com.mic.kjplayer.model.Destination;
+import com.mic.kjplayer.navigator.BottomBar;
+import com.mic.kjplayer.navigator.Destination;
 import com.mic.kjplayer.model.SofaTab;
 
 import java.io.BufferedReader;

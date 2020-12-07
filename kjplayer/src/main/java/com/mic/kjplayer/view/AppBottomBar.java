@@ -14,8 +14,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.mic.kjplayer.R;
-import com.mic.kjplayer.model.BottomBar;
-import com.mic.kjplayer.model.Destination;
+import com.mic.kjplayer.navigator.BottomBar;
+import com.mic.kjplayer.navigator.Destination;
 import com.mic.kjplayer.utils.AppConfig;
 
 import java.util.List;
