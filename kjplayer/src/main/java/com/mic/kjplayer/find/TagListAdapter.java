@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.find;
+package com.mic.kjplayer.find;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mic.appcore.extention.AbsPagedListAdapter;
 import com.mic.kjplayer.databinding.LayoutTagListItemBinding;
 import com.mic.kjplayer.model.TagList;
-import com.mic.kjplayer.ui.InteractionPresenter;
+import com.mic.kjplayer.InteractionPresenter;
 
 public class TagListAdapter extends AbsPagedListAdapter<TagList, TagListAdapter.ViewHolder> {
     private LayoutInflater mInflater;

@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.sofa;
+package com.mic.kjplayer.sofa;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -20,7 +20,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import com.mic.annotation.FragmentDestination;
 import com.mic.kjplayer.databinding.FragmentSofaBinding;
 import com.mic.kjplayer.model.SofaTab;
-import com.mic.kjplayer.ui.home.HomeFragment;
+import com.mic.kjplayer.home.HomeFragment;
 import com.mic.kjplayer.navigator.AppConfig;
 
 import java.util.ArrayList;

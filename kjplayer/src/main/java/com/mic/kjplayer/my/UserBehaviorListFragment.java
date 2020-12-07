@@ -12,7 +12,7 @@ import com.mic.kjplayer.exoplayer.PageListPlayDetector;
 import com.mic.kjplayer.exoplayer.PageListPlayManager;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.mvvm.AbsListFragment;
-import com.mic.kjplayer.ui.home.FeedAdapter;
+import com.mic.kjplayer.home.FeedAdapter;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 
 public class UserBehaviorListFragment extends AbsListFragment<Feed, UserBehaviorViewModel> {

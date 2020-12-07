@@ -19,7 +19,7 @@
             name="owner"
             type="androidx.lifecycle.LifecycleOwner" />
 
-        <import type="com.mic.kjplayer.ui.InteractionPresenter"/>
+        <import type="com.mic.kjplayer.InteractionPresenter"/>
 
     </data>
 

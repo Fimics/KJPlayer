@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.find;
+package com.mic.kjplayer.find;
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,7 +30,7 @@ import com.mic.kjplayer.exoplayer.PageListPlayDetector;
 import com.mic.kjplayer.exoplayer.PageListPlayManager;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.model.TagList;
-import com.mic.kjplayer.ui.home.FeedAdapter;
+import com.mic.kjplayer.home.FeedAdapter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.RefreshState;

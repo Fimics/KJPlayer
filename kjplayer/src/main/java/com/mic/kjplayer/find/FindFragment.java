@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.find;
+package com.mic.kjplayer.find;
 
 import android.text.TextUtils;
 
@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.mic.annotation.FragmentDestination;
 import com.mic.kjplayer.model.SofaTab;
-import com.mic.kjplayer.ui.sofa.SofaFragment;
+import com.mic.kjplayer.sofa.SofaFragment;
 import com.mic.kjplayer.navigator.AppConfig;
 
 

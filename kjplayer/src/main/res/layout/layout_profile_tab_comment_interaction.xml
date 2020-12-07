@@ -17,7 +17,7 @@
 
         <import type="com.mic.appcore.utils.StringConvert"></import>
 
-        <import type="com.mic.kjplayer.ui.InteractionPresenter" />
+        <import type="com.mic.kjplayer.InteractionPresenter" />
 
         <import type="android.content.Context" />
 

@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.home;
+package com.mic.kjplayer.home;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -22,7 +22,7 @@ import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.LayoutFeedTypeImageBinding;
 import com.mic.kjplayer.databinding.LayoutFeedTypeVideoBinding;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.ui.InteractionPresenter;
+import com.mic.kjplayer.InteractionPresenter;
 import com.mic.kjplayer.detail.FeedDetailActivity;
 import com.mic.kjplayer.exoplayer.ListPlayerView;
 

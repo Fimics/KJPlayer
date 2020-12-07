@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.find;
+package com.mic.kjplayer.find;
 
 import android.os.Bundle;
 import android.text.TextUtils;

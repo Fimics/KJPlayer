@@ -19,7 +19,7 @@
 
         <import type="com.mic.appcore.utils.TimeUtils" />
 
-        <import type="com.mic.kjplayer.ui.InteractionPresenter"/>
+        <import type="com.mic.kjplayer.InteractionPresenter"/>
 
         <variable
             name="owner"

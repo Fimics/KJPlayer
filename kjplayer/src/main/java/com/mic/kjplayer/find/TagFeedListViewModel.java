@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.find;
+package com.mic.kjplayer.find;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;

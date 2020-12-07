@@ -68,7 +68,7 @@
             android:theme="@style/feedDetail">
         </activity>
 
-        <activity android:name=".ui.find.TagFeedListActivity">
+        <activity android:name=".find.TagFeedListActivity">
         </activity>
 
         <activity android:name=".my.ProfileActivity">

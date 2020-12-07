@@ -18,7 +18,7 @@ import com.mic.appcore.extention.AbsPagedListAdapter;
 import com.mic.appcore.utils.PixUtils;
 import com.mic.kjplayer.databinding.LayoutFeedCommentListItemBinding;
 import com.mic.kjplayer.model.Comment;
-import com.mic.kjplayer.ui.InteractionPresenter;
+import com.mic.kjplayer.InteractionPresenter;
 import com.mic.kjplayer.mvvm.MutableItemKeyedDataSource;
 import com.mic.kjplayer.login.UserManager;
 import com.mic.kjplayer.publish.PreviewActivity;

@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui.home;
+package com.mic.kjplayer.home;
 
 import android.os.Bundle;
 import android.util.Log;
