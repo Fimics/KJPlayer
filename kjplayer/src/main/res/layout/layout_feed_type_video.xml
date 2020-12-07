@@ -35,12 +35,12 @@
 
 
         <!--   视频区域-->
-        <com.mic.kjplayer.view.ListPlayerView
+        <com.mic.kjplayer.exoplayer.ListPlayerView
             android:id="@+id/list_player_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp_10">
-        </com.mic.kjplayer.view.ListPlayerView>
+        </com.mic.kjplayer.exoplayer.ListPlayerView>
 
 
         <include

@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.mic.kjplayer.view.FullScreenPlayerView
+        <com.mic.kjplayer.exoplayer.FullScreenPlayerView
             android:id="@+id/player_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             app:min_height="200dp"
             app:scrolling_id="@+id/recycler_view">
 
-        </com.mic.kjplayer.view.FullScreenPlayerView>
+        </com.mic.kjplayer.exoplayer.FullScreenPlayerView>
 
 
         <include

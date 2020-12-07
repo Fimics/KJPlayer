@@ -11,7 +11,7 @@ import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.LayoutFeedDetailTypeVideoBinding;
 import com.mic.kjplayer.databinding.LayoutFeedDetailTypeVideoHeaderBinding;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.view.FullScreenPlayerView;
+import com.mic.kjplayer.exoplayer.FullScreenPlayerView;
 
 public class VideoViewHandler extends ViewHandler {
     private final CoordinatorLayout coordinator;

@@ -24,7 +24,7 @@ import com.mic.kjplayer.databinding.LayoutFeedTypeVideoBinding;
 import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.ui.InteractionPresenter;
 import com.mic.kjplayer.ui.detail.FeedDetailActivity;
-import com.mic.kjplayer.view.ListPlayerView;
+import com.mic.kjplayer.exoplayer.ListPlayerView;
 
 public class FeedAdapter extends AbsPagedListAdapter<Feed, FeedAdapter.ViewHolder> {
     private final LayoutInflater inflater;

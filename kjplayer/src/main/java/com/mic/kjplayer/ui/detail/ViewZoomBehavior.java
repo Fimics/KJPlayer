@@ -15,7 +15,7 @@ import androidx.customview.widget.ViewDragHelper;
 
 import com.mic.appcore.utils.PixUtils;
 import com.mic.kjplayer.R;
-import com.mic.kjplayer.view.FullScreenPlayerView;
+import com.mic.kjplayer.exoplayer.FullScreenPlayerView;
 
 public class ViewZoomBehavior extends CoordinatorLayout.Behavior<FullScreenPlayerView> {
     private OverScroller overScroller;

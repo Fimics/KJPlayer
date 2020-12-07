@@ -1,4 +1,4 @@
-package com.mic.kjplayer.view;
+package com.mic.kjplayer.exoplayer;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -22,9 +22,7 @@ import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.mic.appcore.utils.PixUtils;
 import com.mic.kjplayer.R;
-import com.mic.kjplayer.exoplayer.IPlayTarget;
-import com.mic.kjplayer.exoplayer.PageListPlay;
-import com.mic.kjplayer.exoplayer.PageListPlayManager;
+import com.mic.kjplayer.view.PPImageView;
 
 /**
  * 列表视频播放专用
