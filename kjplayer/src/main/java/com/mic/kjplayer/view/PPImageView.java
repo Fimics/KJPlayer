@@ -25,7 +25,6 @@ import com.mic.appcore.view.ViewHelper;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
-
 public class PPImageView extends AppCompatImageView {
     public PPImageView(Context context) {
         super(context);
@@ -60,7 +59,6 @@ public class PPImageView extends AppCompatImageView {
         }
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         if (layoutParams != null && layoutParams.width > 0 && layoutParams.height > 0) {
-            //防止图片过大但需要的图片很小，造成资源浪费
             builder.override(layoutParams.width, layoutParams.height);
         }
         builder.into(view);

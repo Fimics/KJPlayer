@@ -59,7 +59,7 @@ public class PageListPlay {
         if (controlView != null) {
             controlView.setPlayer(null);
 //            controlView.setVisibilityListener(null);
-            controlView.addVisibilityListener(null);
+            //TODO
             controlView = null;
         }
     }

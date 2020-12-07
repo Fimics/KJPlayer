@@ -49,4 +49,54 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowBackground">@drawable/welcome_bg</item>
     </style>
+
+    <style name="launcher" parent="XAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="preview" parent="XAppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="feedDetail" parent="XAppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="capture" parent="XAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <declare-styleable name="view_offset_behavior">
+        <attr name="anchor_gravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="scroll_follow" format="boolean" />
+        <attr name="anchor_id" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="view_anchor_behavior">
+        <attr name="anchorId" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="view_zoom_behavior">
+        <attr name="min_height" format="dimension"/>
+        <attr name="scrolling_id" format="integer"/>
+    </declare-styleable>
+
+
+    <style name="active" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_000</item>
+    </style>
+
+    <style name="inActive" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_999</item>
+    </style>
 </resources>

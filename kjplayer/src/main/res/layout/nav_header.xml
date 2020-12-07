@@ -28,6 +28,6 @@
         android:layout_above="@id/username"
         android:text="Tony Green"
         android:textColor="#FFF"
-        android:textSize="14sp" />
+        android:textSize="14sp"/>
 
 </RelativeLayout>

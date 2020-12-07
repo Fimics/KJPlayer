@@ -8,9 +8,6 @@ import android.os.MessageQueue;
 import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.mic.kjplayer.navgraph.AppConfig;
 
 public class WelcomeActivity extends BaseActivity {
 

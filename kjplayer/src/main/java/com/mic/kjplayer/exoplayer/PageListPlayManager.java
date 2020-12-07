@@ -15,7 +15,6 @@ import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvicto
 import com.google.android.exoplayer2.upstream.cache.SimpleCache;
 import com.google.android.exoplayer2.util.Util;
 import com.mic.appcore.global.AppGlobals;
-
 import java.util.HashMap;
 
 /**

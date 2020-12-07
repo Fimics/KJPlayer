@@ -6,7 +6,6 @@ import androidx.annotation.Nullable;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
-
 import com.mic.kjplayer.BR;
 
 import java.io.Serializable;

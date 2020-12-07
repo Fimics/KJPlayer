@@ -3,8 +3,7 @@ package com.mic.kjplayer.model;
 import androidx.annotation.Nullable;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
-
-import com.mic.kjplayer.BR;
+import androidx.databinding.library.baseAdapters.BR;
 
 import java.io.Serializable;
 

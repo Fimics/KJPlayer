@@ -24,8 +24,6 @@
         android:theme="@style/XAppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".BaseActivity"></activity>
-        <activity android:name=".tabs.TabPublishActivity" />
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait"
@@ -38,6 +36,66 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <!--这是是QQ快捷登录SDK 里面包含但没用的 apache的类，需要在这里通过uses-library去除掉 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.publish.PublishActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ui.publish.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/capture">
+        </activity>
+
+        <activity
+            android:name=".ui.publish.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/preview">
+        </activity>
+
+        <activity android:name=".ui.login.LoginActivity">
+        </activity>
+
+        <activity
+            android:name=".ui.detail.FeedDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/feedDetail">
+        </activity>
+
+        <activity android:name=".ui.find.TagFeedListActivity">
+        </activity>
+
+        <activity android:name=".ui.my.ProfileActivity">
+        </activity>
+
+        <activity android:name=".ui.my.UserBehaviorListActivity">
+        </activity>
+
+
+        <!-- 注册SDKActivity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101794421" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:transitionName="blur_image"
         tools:background="@color/color_theme_10">
+
     </com.mic.kjplayer.view.PPImageView>
 
 
@@ -21,7 +22,7 @@
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:transitionName="cover"/>
+        android:transitionName="cover"></com.mic.kjplayer.view.PPImageView>
 
 
     <ImageView
@@ -30,7 +31,7 @@
         android:layout_height="@dimen/dp_40"
         android:layout_gravity="center"
         android:src="@drawable/icon_video_play"
-        android:transitionName="play_btn"/>
+        android:transitionName="play_btn"></ImageView>
 
 
     <!--    视频播放时的底部进度条-->

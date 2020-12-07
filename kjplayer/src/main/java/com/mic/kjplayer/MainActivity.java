@@ -6,22 +6,19 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.mic.kjplayer.navgraph.NavGraphBuilder;
-import com.mic.kjplayer.utils.StatusBarUtil;
+import com.mic.appcore.utils.StatusBarUtil;
+import com.mic.kjplayer.utils.NavGraphBuilder;
 
 @SuppressWarnings("")
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
