@@ -12,8 +12,8 @@ import androidx.paging.PagedListAdapter;
 
 import com.mic.kjplayer.R;
 import com.mic.kjplayer.model.TagList;
-import com.mic.kjplayer.ui.AbsListFragment;
-import com.mic.kjplayer.ui.MutableItemKeyedDataSource;
+import com.mic.kjplayer.mvvm.AbsListFragment;
+import com.mic.kjplayer.mvvm.MutableItemKeyedDataSource;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 
 import java.util.List;

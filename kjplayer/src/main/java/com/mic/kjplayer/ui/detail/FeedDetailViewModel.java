@@ -7,7 +7,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.mic.kjokhttp.ApiResponse;
 import com.mic.kjokhttp.ApiService;
 import com.mic.kjplayer.model.Comment;
-import com.mic.kjplayer.ui.AbsViewModel;
+import com.mic.kjplayer.mvvm.AbsViewModel;
 import com.mic.kjplayer.ui.login.UserManager;
 
 import java.util.ArrayList;

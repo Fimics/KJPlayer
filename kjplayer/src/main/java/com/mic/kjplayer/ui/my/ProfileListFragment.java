@@ -12,7 +12,7 @@ import androidx.paging.PagedListAdapter;
 import com.mic.kjplayer.exoplayer.PageListPlayDetector;
 import com.mic.kjplayer.exoplayer.PageListPlayManager;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.ui.AbsListFragment;
+import com.mic.kjplayer.mvvm.AbsListFragment;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 
 public class ProfileListFragment extends AbsListFragment<Feed, ProfileViewModel> {

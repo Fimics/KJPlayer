@@ -1,4 +1,4 @@
-package com.mic.kjplayer.ui;
+package com.mic.kjplayer.mvvm;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

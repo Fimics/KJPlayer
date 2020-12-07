@@ -15,8 +15,8 @@ import com.mic.annotation.FragmentDestination;
 import com.mic.kjplayer.exoplayer.PageListPlayDetector;
 import com.mic.kjplayer.exoplayer.PageListPlayManager;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.ui.AbsListFragment;
-import com.mic.kjplayer.ui.MutablePageKeyedDataSource;
+import com.mic.kjplayer.mvvm.AbsListFragment;
+import com.mic.kjplayer.mvvm.MutablePageKeyedDataSource;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 
 import java.util.List;

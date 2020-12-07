@@ -15,8 +15,8 @@ import com.mic.kjokhttp.ApiService;
 import com.mic.kjokhttp.JsonCallback;
 import com.mic.kjokhttp.Request;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.ui.AbsViewModel;
-import com.mic.kjplayer.ui.MutablePageKeyedDataSource;
+import com.mic.kjplayer.mvvm.AbsViewModel;
+import com.mic.kjplayer.mvvm.MutablePageKeyedDataSource;
 import com.mic.kjplayer.ui.login.UserManager;
 
 import java.util.ArrayList;
