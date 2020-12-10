@@ -94,10 +94,13 @@ public class HomeViewModel extends AbsViewModel<Feed> {
                 @Override
                 public void onCacheSuccess(ApiResponse<List<Feed>> response) {
                     Log.e("loadData", "onCacheSuccess: ");
+                    //List数据转成PageList
                     MutablePageKeyedDataSource dataSource = new MutablePageKeyedDataSource<Feed>();
                     dataSource.data.addAll(response.body);
 
+                    //pageList对饮与DataSource关联
                     PagedList pagedList = dataSource.buildNewPagedList(config);
+                    //把数据发送出去
                     cacheLiveData.postValue(pagedList);
 
                     //下面的不可取，否则会报
