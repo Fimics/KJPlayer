@@ -31,10 +31,12 @@ public class PageListPlayDetector {
         mTargets.remove(target);
     }
 
+    //owner监听宿主的生命周期
     public PageListPlayDetector(LifecycleOwner owner, RecyclerView recyclerView) {
         mRecyclerView = recyclerView;
 
         owner.getLifecycle().addObserver(new LifecycleEventObserver() {
+            //宿主生命周期的变化
             @Override
             public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
                 if (event == Lifecycle.Event.ON_DESTROY) {
@@ -46,11 +48,14 @@ public class PageListPlayDetector {
                 }
             }
         });
+
+        //监听有新数据加到recyclerView
         recyclerView.getAdapter().registerAdapterDataObserver(mDataObserver);
         recyclerView.addOnScrollListener(scrollListener);
 
     }
 
+    //监听列表滚动
     RecyclerView.OnScrollListener scrollListener = new RecyclerView.OnScrollListener() {
         @Override
         public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
