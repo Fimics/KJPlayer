@@ -57,7 +57,7 @@
                 android:orientation="horizontal">
 
 
-                <com.mic.kjplayer.view.PPImageView
+                <com.mic.appcore.view.PPImageView
                     android:id="@+id/avatar"
                     android:layout_width="@dimen/dp_20"
                     android:layout_height="@dimen/dp_20"
@@ -65,7 +65,7 @@
                     app:isCircle="@{true}"
                     tools:src="@drawable/ic_launcher">
 
-                </com.mic.kjplayer.view.PPImageView>
+                </com.mic.appcore.view.PPImageView>
 
                 <TextView
                     android:id="@+id/user_name"
@@ -126,7 +126,7 @@
                 android:layout_marginTop="@dimen/dp_10"
                 android:visibility="@{TextUtils.isEmpty(comment.imageUrl)?View.GONE:View.VISIBLE}">
 
-                <com.mic.kjplayer.view.PPImageView
+                <com.mic.appcore.view.PPImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -135,7 +135,7 @@
                     app:image_url="@{comment.imageUrl}"
                     app:isCircle="@{false}"
                     tools:src="@drawable/ic_launcher">
-                </com.mic.kjplayer.view.PPImageView>
+                </com.mic.appcore.view.PPImageView>
 
                 <ImageView
                     android:layout_width="@dimen/dp_20"

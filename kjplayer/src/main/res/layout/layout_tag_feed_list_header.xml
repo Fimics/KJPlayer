@@ -30,7 +30,7 @@
         android:orientation="vertical"
         android:paddingBottom="@dimen/dp_10">
 
-        <com.mic.kjplayer.view.PPImageView
+        <com.mic.appcore.view.PPImageView
             android:id="@+id/header_background"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -39,7 +39,7 @@
             app:isCircle="@{false}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-        </com.mic.kjplayer.view.PPImageView>
+        </com.mic.appcore.view.PPImageView>
 
 
         <TextView

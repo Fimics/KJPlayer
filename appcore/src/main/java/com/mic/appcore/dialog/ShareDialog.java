@@ -1,4 +1,4 @@
-package com.mic.kjplayer.share;
+package com.mic.appcore.dialog;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -23,11 +23,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.mic.appcore.R;
 import com.mic.appcore.utils.PixUtils;
 import com.mic.appcore.view.CornerFrameLayout;
 import com.mic.appcore.view.ViewHelper;
-import com.mic.kjplayer.R;
-import com.mic.kjplayer.view.PPImageView;
+import com.mic.appcore.view.PPImageView;
 
 import java.util.ArrayList;
 import java.util.List;

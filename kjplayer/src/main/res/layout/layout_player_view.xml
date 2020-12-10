@@ -5,25 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.mic.kjplayer.view.PPImageView
+    <com.mic.appcore.view.PPImageView
         android:id="@+id/blur_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionName="blur_image"
         tools:background="@color/color_theme_10">
 
-    </com.mic.kjplayer.view.PPImageView>
+    </com.mic.appcore.view.PPImageView>
 
 
     <!--    真正能够播放展示视频画面的view  会动态的添加到这里-->
 
 
-    <com.mic.kjplayer.view.PPImageView
+    <com.mic.appcore.view.PPImageView
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionName="cover">
-    </com.mic.kjplayer.view.PPImageView>
+    </com.mic.appcore.view.PPImageView>
 
 
     <ImageView

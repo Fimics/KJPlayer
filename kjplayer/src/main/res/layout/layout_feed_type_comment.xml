@@ -63,7 +63,7 @@
                 android:layout_width="@dimen/dp_40"
                 android:layout_height="@dimen/dp_40">
 
-                <com.mic.kjplayer.view.PPImageView
+                <com.mic.appcore.view.PPImageView
                     android:id="@+id/icon_cover"
                     image_url="@{feed.cover}"
                     android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                     android:scaleType="centerCrop"
                     app:clip_radius="6dp"
                     app:clip_side="right">
-                </com.mic.kjplayer.view.PPImageView>
+                </com.mic.appcore.view.PPImageView>
 
                 <ImageView
                     android:id="@+id/icon_video"

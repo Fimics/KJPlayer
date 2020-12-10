@@ -37,7 +37,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.ActivityLayoutCaptureBinding;
-import com.mic.kjplayer.view.RecordView;
+import com.mic.appcore.view.RecordView;
 
 import java.io.File;
 import java.util.ArrayList;

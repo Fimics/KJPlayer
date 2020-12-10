@@ -134,12 +134,12 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/action_add_tag">
 
-            <com.mic.kjplayer.view.PPImageView
+            <com.mic.appcore.view.PPImageView
                 android:id="@+id/cover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </com.mic.kjplayer.view.PPImageView>
+            </com.mic.appcore.view.PPImageView>
 
             <ImageView
                 android:id="@+id/video_icon"

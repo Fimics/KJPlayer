@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.mic.kjplayer.view.PPImageView
+        <com.mic.appcore.view.PPImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:blur_url="@{user.avatar}"
@@ -27,7 +27,7 @@
             android:scaleType="fitXY"
             tools:background="#ff0000">
 
-        </com.mic.kjplayer.view.PPImageView>
+        </com.mic.appcore.view.PPImageView>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/action_logout"
@@ -42,7 +42,7 @@
 
         </androidx.appcompat.widget.AppCompatImageView>
 
-        <com.mic.kjplayer.view.PPImageView
+        <com.mic.appcore.view.PPImageView
             android:id="@+id/avatar"
             android:layout_width="@dimen/dp_45"
             android:layout_height="@dimen/dp_45"
@@ -55,7 +55,7 @@
             app:radius="@{0}"
             tools:src="@drawable/ic_launcher">
 
-        </com.mic.kjplayer.view.PPImageView>
+        </com.mic.appcore.view.PPImageView>
 
         <TextView
             android:id="@+id/name"

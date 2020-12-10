@@ -32,13 +32,13 @@
             app:feedText="@{feed.feeds_text}"
             app:lines="@{1000}"/>
 
-        <com.mic.kjplayer.view.PPImageView
+        <com.mic.appcore.view.PPImageView
             android:id="@+id/header_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp_10">
 
-        </com.mic.kjplayer.view.PPImageView>
+        </com.mic.appcore.view.PPImageView>
 
         <View
             android:layout_width="match_parent"

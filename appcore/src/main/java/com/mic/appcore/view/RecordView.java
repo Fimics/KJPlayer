@@ -1,4 +1,4 @@
-package com.mic.kjplayer.view;
+package com.mic.appcore.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,8 +15,8 @@ import android.view.ViewConfiguration;
 
 import androidx.annotation.Nullable;
 
+import com.mic.appcore.R;
 import com.mic.appcore.utils.PixUtils;
-import com.mic.kjplayer.R;
 
 public class RecordView extends View implements View.OnLongClickListener, View.OnClickListener {
 

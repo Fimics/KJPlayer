@@ -46,7 +46,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
 
-            <com.mic.kjplayer.view.PPImageView
+            <com.mic.appcore.view.PPImageView
                 android:id="@+id/tag_logo"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
@@ -57,7 +57,7 @@
                 app:layout_constraintLeft_toRightOf="@id/action_back"
                 app:layout_constraintTop_toTopOf="parent"
                 app:radius="@{8}">
-            </com.mic.kjplayer.view.PPImageView>
+            </com.mic.appcore.view.PPImageView>
 
             <TextView
                 android:id="@+id/tag_title"

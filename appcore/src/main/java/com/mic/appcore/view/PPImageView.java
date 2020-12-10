@@ -1,4 +1,4 @@
-package com.mic.kjplayer.view;
+package com.mic.appcore.view;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -20,7 +20,6 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.mic.appcore.utils.PixUtils;
-import com.mic.appcore.view.ViewHelper;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;

@@ -12,7 +12,7 @@ import com.mic.kjplayer.R;
 import com.mic.kjplayer.databinding.ActivityFeedDetailTypeImageBinding;
 import com.mic.kjplayer.databinding.LayoutFeedDetailTypeImageHeaderBinding;
 import com.mic.kjplayer.model.Feed;
-import com.mic.kjplayer.view.PPImageView;
+import com.mic.appcore.view.PPImageView;
 
 public class ImageViewHandler extends ViewHandler {
 

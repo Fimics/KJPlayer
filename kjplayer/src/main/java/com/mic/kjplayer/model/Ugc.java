@@ -24,8 +24,10 @@ public class Ugc extends BaseObservable implements Serializable {
         return shareCount;
     }
 
+    //shareCount 变公时，哪个View使用了这个字段，就会自动更新
     public void setShareCount(int shareCount) {
         this.shareCount = shareCount;
+        //BR_ALL 引用了这个字段的View的id
         notifyPropertyChanged(BR._all);
     }
 

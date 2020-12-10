@@ -24,7 +24,7 @@ import com.mic.kjplayer.model.Feed;
 import com.mic.kjplayer.model.TagList;
 import com.mic.kjplayer.model.User;
 import com.mic.kjplayer.login.UserManager;
-import com.mic.kjplayer.share.ShareDialog;
+import com.mic.appcore.dialog.ShareDialog;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -356,17 +356,18 @@ public class InteractionPresenter {
     }
 
     private static boolean isLogin(LifecycleOwner owner, Observer<User> observer) {
-        if (UserManager.get().isLogin()) {
-            return true;
-        } else {
-            LiveData<User> liveData = UserManager.get().login(AppGlobals.getApplication());
-            if (owner == null) {
-                liveData.observeForever(loginObserver(observer, liveData));
-            } else {
-                liveData.observe(owner, loginObserver(observer, liveData));
-            }
-            return false;
-        }
+        return true;
+//        if (UserManager.get().isLogin()) {
+//            return true;
+//        } else {
+//            LiveData<User> liveData = UserManager.get().login(AppGlobals.getApplication());
+//            if (owner == null) {
+//                liveData.observeForever(loginObserver(observer, liveData));
+//            } else {
+//                liveData.observe(owner, loginObserver(observer, liveData));
+//            }
+//            return false;
+//        }
     }
 
     @NotNull

@@ -15,7 +15,7 @@
         android:layout_height="90dp"
         android:orientation="vertical">
 
-        <com.mic.kjplayer.view.PPImageView
+        <com.mic.appcore.view.PPImageView
             android:id="@+id/tag_avtar"
             android:layout_width="@dimen/dp_60"
             android:layout_height="@dimen/dp_60"
@@ -28,7 +28,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:radius="@{8}">
-        </com.mic.kjplayer.view.PPImageView>
+        </com.mic.appcore.view.PPImageView>
 
         <TextView
             android:id="@+id/tag_title"

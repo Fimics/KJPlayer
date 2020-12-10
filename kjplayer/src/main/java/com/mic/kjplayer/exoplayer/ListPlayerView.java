@@ -22,7 +22,7 @@ import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.mic.appcore.utils.PixUtils;
 import com.mic.kjplayer.R;
-import com.mic.kjplayer.view.PPImageView;
+import com.mic.appcore.view.PPImageView;
 
 /**
  * 列表视频播放专用
