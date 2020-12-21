@@ -24,7 +24,8 @@
             android:text="@string/capture_tips"
             android:textColor="@color/color_white"/>
 
-        <com.mic.appcore.view.RecordView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <com.mic.appcore.view.RecordView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/record_view"
             android:layout_width="100dp"
             android:layout_height="100dp"

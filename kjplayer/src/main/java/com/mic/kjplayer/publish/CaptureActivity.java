@@ -49,6 +49,7 @@ import java.util.Map;
 public class CaptureActivity extends AppCompatActivity {
     public static final int REQ_CAPTURE = 10001;
     private ActivityLayoutCaptureBinding mBinding;
+    //申请权限必须去Manifest.xml中注册，否则是不起作用的。
     private static final String[] PERMISSIONS = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO};
     private static final int PERMISSION_CODE = 1000;
     private ArrayList<String> deniedPermission = new ArrayList<>();
@@ -152,6 +153,9 @@ public class CaptureActivity extends AppCompatActivity {
         PreviewActivity.startActivityForResult(this, outputFilePath, !takingPicture, "完成");
     }
 
+    /**
+     * 检查权限是否申请成功。
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

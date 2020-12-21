@@ -71,6 +71,7 @@ public class LiveDataBus {
 
         private T mStickyData;
 
+        //用来标记发送了几次事件了
         private int mVersion = 0;
 
         public StickyLiveData(String eventName) {
