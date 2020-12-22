@@ -32,6 +32,13 @@ public class ViewAnchorBehavior extends CoordinatorLayout.Behavior<View> {
         extraUsed = PixUtils.dp2px(48);
     }
 
+    /**
+     *
+     * @param parent  根布局
+     * @param child   被应用的View
+     * @param dependency  被依赖的View
+     * @return
+     */
     @Override
     public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
         return anchorId == dependency.getId();
