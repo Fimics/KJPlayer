@@ -1,6 +1,5 @@
+println "初始化阶段开始..."
 def debug = true
-
-
 if(debug){
     gradle.ext.exoplayerRoot = 'submodule/ExoPlayer'
 //    gradle.ext.exoplayerModulePrefix = 'exoplayer-'
