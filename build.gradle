@@ -70,3 +70,23 @@ this.gradle.addBuildListener(new BuildListener() {
 
     }
 })
+
+//project相关api
+//this.getProjects();
+def getProjects(){
+    println '----------------'
+    println 'root project'
+    println '----------------'
+
+//    this.getAllprojects().eachWithIndex{ Project project, int index ->
+//        if(index ==0){
+//            println "root project :${project.name}"
+//        }else{
+//            println "+------- project :${project.name}"
+//        }
+//    }
+
+    this.getSubprojects().eachWithIndex{ Project project, int index ->
+         println "+------- project :${project.name}"
+    }
+}

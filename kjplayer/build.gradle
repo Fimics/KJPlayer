@@ -74,3 +74,10 @@ dependencies {
         implementation it;
     }
 }
+
+this.getNames()
+def getNames(){
+    def rootName = this.getRootProject().name
+    def parentName = this.getParent().name;
+    println "the parent project name is :${parentName} :rootName-> ${rootName}"
+}
