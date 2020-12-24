@@ -115,22 +115,39 @@ def getNames(){
 //}
 
 
-//执行外部命令
-task(name:'apkcopy'){
+//执行外部命令  ./gradlew kjplayer:apkcopy
+task apkcopy(dependsOn: build){
     //gradle的执行阶段去执行
     doLast{
-        def sourcePath = this.buildDir.path+'/outputs/apk'
+        def source = this.buildDir.path+'/outputs/apk'
         //打包机目录
-        def desationPath = '/Users/lipengju/Desktop'
-        def command= "mv -f ${sourcePath}  ${desationPath}"
+        def dest = '/Users/lipengju/Desktop/'
+        def command= "mv -f ${source}  ${dest}"
         exec {
             try {
                 executable 'bash'
-                args '-c' command
-                println "apkcopy"+执行成功
+                args  '-c', command
+                println "apkcopy 执行成功"
             }catch(GradleException e){
                 println e.toString
             }
         }
     }
+}
+
+//task ./gradlew tasks 查看工程中有多少个task
+//直接通过task函数创建
+task helloTask{
+    setGroup('fimics')
+    println 'i am helloTask'
+}
+
+
+//tasks 是task容器，用来管理project中的所有task
+//通过TaskContainer去创建Task
+this.tasks.create(name: 'helloTask2'){
+    //分组显示在Gradle栏
+    setGroup('fimics')
+    setDescription("tasks 学习demo")
+    println 'i am helloTask2'
 }

@@ -153,7 +153,7 @@ println "root path -> "+getRootDir().absolutePath
 println "build path -> "+getBuildDir().absolutePath
 println  "project path -> "+getProjectDir().absolutePath
 
-println getContent('depends.gradle')
+//println getContent('depends.gradle')
 //path 相对于当前project工程开始查找
 def getContent(String path){
     try {
