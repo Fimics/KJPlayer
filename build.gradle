@@ -3,12 +3,25 @@
 apply from: this.file('depends.gradle') //去当前工程下找 并把该文件内容引入进来
 // 根目录下的build.gradle头部加入自定义config.gradle，相当于layout布局中加入include
 //apply from: "config.gradle"
+
+//依赖配置的核心功能
 buildscript {
     ext.kotlin_version = "1.4.20"
+    //工程的创库地址
     repositories {
         google()
         jcenter()
+//        maven {
+//            name 'personal'
+//            url 'htoop://localhost:8081/nexus/repositiories'
+//            credentials{
+//                username 'admin'
+//                pawwword 'admin123'
+//            }
+//        }
     }
+
+    //插件的依赖地址
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -134,3 +147,20 @@ subprojects {Project project->
  *     String DEFAULT_VERSION = "unspecified";
  *     String DEFAULT_STATUS = "release";
  */
+
+//文件相关api
+println "root path -> "+getRootDir().absolutePath
+println "build path -> "+getBuildDir().absolutePath
+println  "project path -> "+getProjectDir().absolutePath
+
+println getContent('depends.gradle')
+//path 相对于当前project工程开始查找
+def getContent(String path){
+    try {
+        def file = file(path)
+        return file.text
+    }catch(GradleException e){
+        println "file not found..."
+    }
+    return null;
+}

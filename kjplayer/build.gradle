@@ -38,8 +38,8 @@ android {
     }
 }
 
+//为应用程序添加依赖
 dependencies {
-
     implementation depends.appcompat
     implementation depends.material
     implementation depends.constraint
@@ -54,6 +54,12 @@ dependencies {
 
     //QQ快捷登录
     implementation files('libs/open_sdk_r6140_lite.jar')
+
+//    {
+//        exclude module : 'support-v4' //把module类型的 support-v4包排除掉
+//        exclude group : 'com.android.support' //排除指定包(com.android.support)下所有库
+//        transitive false //禁止传递依赖
+//    }
 
     if (gradle.hasProperty('exoplayerRoot')) {
         implementation project(':library-core')
@@ -80,4 +86,51 @@ def getNames(){
     def rootName = this.getRootProject().name
     def parentName = this.getParent().name;
     println "the parent project name is :${parentName} :rootName-> ${rootName}"
+}
+
+//拷贝单一文件
+//copy {
+//    from file('kj.jks')
+//    into getRootProject().getBuildDir()
+//}
+
+//拷贝文件夹
+//copy {
+//    from file('build/outputs/apk/')
+//    into getRootProject().getBuildDir().path+'/apk'
+//     exclude {}
+//    rename {}
+//}
+
+//对文件树遍历
+
+//fileTree('build/outputs/apk/'){ FileTree fileTree ->
+//    fileTree.visit { FileTreeElement element ->
+//        println "this file name is:"+element.file.name
+//        copy {
+//            from element.file
+//            into getRootProject().getBuildDir().path+'/test/'
+//        }
+//    }
+//}
+
+
+//执行外部命令
+task(name:'apkcopy'){
+    //gradle的执行阶段去执行
+    doLast{
+        def sourcePath = this.buildDir.path+'/outputs/apk'
+        //打包机目录
+        def desationPath = '/Users/lipengju/Desktop'
+        def command= "mv -f ${sourcePath}  ${desationPath}"
+        exec {
+            try {
+                executable 'bash'
+                args '-c' command
+                println "apkcopy"+执行成功
+            }catch(GradleException e){
+                println e.toString
+            }
+        }
+    }
 }
