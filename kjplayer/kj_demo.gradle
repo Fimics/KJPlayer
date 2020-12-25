@@ -1,0 +1,202 @@
+this.getNames()
+
+def getNames() {
+    def rootName = this.getRootProject().name
+    def parentName = this.getParent().name;
+    println "the parent project name is :${parentName} :rootName-> ${rootName}"
+}
+
+//拷贝单一文件
+//copy {
+//    from file('kj.jks')
+//    into getRootProject().getBuildDir()
+//}
+
+//拷贝文件夹
+//copy {
+//    from file('build/outputs/apk/')
+//    into getRootProject().getBuildDir().path+'/apk'
+//     exclude {}
+//    rename {}
+//}
+
+//对文件树遍历
+
+//fileTree('build/outputs/apk/'){ FileTree fileTree ->
+//    fileTree.visit { FileTreeElement element ->
+//        println "this file name is:"+element.file.name
+//        copy {
+//            from element.file
+//            into getRootProject().getBuildDir().path+'/test/'
+//        }
+//    }
+//}
+
+
+//执行外部命令  ./gradlew kjplayer:apkcopy
+task apkcopy(dependsOn: build) {
+    setGroup('fimics')
+    //gradle的执行阶段去执行
+    doLast {
+        def source = this.buildDir.path + '/outputs/apk'
+        //打包机目录
+        def dest = '/Users/lipengju/Desktop/'
+        def command = "mv -f ${source}  ${dest}"
+        exec {
+            try {
+                executable 'bash'
+                args '-c', command
+                println "apkcopy 执行成功"
+            } catch (GradleException e) {
+                println e.toString
+            }
+        }
+    }
+}
+
+//task ./gradlew tasks 查看工程中有多少个task
+//直接通过task函数创建
+task helloTask {
+    setGroup('fimics')
+    doLast {
+        println 'i am helloTask'
+    }
+
+}
+
+
+//tasks 是task容器，用来管理project中的所有task
+//通过TaskContainer去创建Task
+this.tasks.create(name: 'helloTask2') {
+    //分组显示在Gradle栏
+    setGroup('fimics')
+    setDescription("tasks 学习demo")
+    doFirst {
+        println 'i am helloTask2  doFirst' + group
+    }
+    doLast {
+        println 'i am helloTask2  doLast' + description
+    }
+}
+
+//doFitst outer
+helloTask2.doFirst {
+    println 'i am helloTask2  doFirst  outer ' + group
+}
+
+//计算build执行时长
+def startBuildTime, endBuildTime
+this.afterEvaluate { Project project ->
+    //保证要找的task已经配置完毕
+    def preBuildTask = project.tasks.getByName('preBuild')
+    preBuildTask.doFirst {
+        startBuildTime = System.currentTimeMillis()
+        println 'the start time is:' + startBuildTime
+    }
+
+    def buildTask = project.tasks.getByName('build')
+    buildTask.doLast {
+        endBuildTime = System.currentTimeMillis()
+        println "the build time is : ${endBuildTime - startBuildTime}"
+    }
+
+}
+
+//task依赖
+task taskX {
+    setGroup('fimics')
+    doLast {
+        println 'taskX'
+    }
+}
+
+task taskY {
+    setGroup('fimics')
+    doLast {
+        println 'taskY'
+    }
+}
+
+task lib1 {
+    setGroup('fimics')
+    doLast {
+        println 'lib1'
+    }
+}
+
+
+task lib2 {
+    setGroup('fimics')
+    doLast {
+        println 'lib2'
+    }
+}
+
+task noLib {
+    setGroup('fimics')
+    doLast {
+        println 'noLib'
+    }
+}
+
+//taskY.dependsOn(taskX)
+
+task taskZ(dependsOn: [taskY, taskX]) {
+    setGroup('fimics')
+    doFirst {
+        println 'taskZ start'
+    }
+    dependsOn this.tasks.findAll { task ->
+        return task.name.startsWith('lib')
+    }
+
+//    Set<Task> taskSet =tasks.findAll {task ->
+//        return task.name.startsWith('lib')
+//    }
+//    println taskSet
+
+    doLast {
+        println 'taskZ end'
+    }
+}
+
+
+//task handleReleaseFile {
+//    setGroup('fimics')
+//    def srcFile = file('releases.xml')
+//    def destDir = new File(this.buildDir, '/generated/release/')
+//    doLast {
+//        println '开始解析对应的xml文件...'
+//        destDir.mkdir()
+//        def releases = new XmlParser().parse(srcFile)
+//        releases.release.each { node ->
+//            //解析每个release节点内容
+//            def name = node.versionName.text()
+//            def versionCode = node.versionCode.text()
+//            def versionInfo = node.versionInfo.text()
+//            //创建文件并写入节点数据
+//            def destFile = new File(destDir, "release-${name}.txt")
+//            destFile.withWriter { writer ->
+//                //通过闭包读写文件，不需要手动关闭流
+//                writer.write("${name}-> ${versionCode} -> ${versionInfo}")
+//            }
+//        }
+//    }
+//}
+//
+//
+//task handleReleaseFileTest(dependsOn: handleReleaseFile) {
+//    setGroup('fimics')
+//    def dir = fileTree(this.buildDir.path + '/generated/release/')
+//    println dir.dir.path
+//    doLast {
+//        println "do last"
+//        dir.each {
+//            println ' the file name is :  ->  ' + it.text
+//        }
+//        println '遍历完成...'
+//    }
+//}
+
+//task 输入输出
+apply from: this.file('kj_releaseinfo.gradle')

@@ -4,6 +4,10 @@ apply from: this.file('depends.gradle') //去当前工程下找 并把该文件�
 // 根目录下的build.gradle头部加入自定义config.gradle，相当于layout布局中加入include
 //apply from: "config.gradle"
 
+//学习测试demo
+//apply from:  this.file('build_demo.gradle')
+
+
 //依赖配置的核心功能
 buildscript {
     ext.kotlin_version = "1.4.20"
@@ -41,126 +45,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-this.beforeEvaluate {
-    println  "配置阶段开始前的监听回调..."
-}
-
-this.afterEvaluate {
-    println  "配置阶段完成后的监听回调用..."
-}
-
-this.gradle.buildFinished {
-    println "应用编译完成..."
-}
-
-//设置监听器监听生命周期
-this.gradle.beforeProject {}
-this.gradle.afterProject {}
-this.gradle.addBuildListener(new BuildListener() {
-    @Override
-    void buildStarted(Gradle gradle) {
-
-    }
-
-    @Override
-    void settingsEvaluated(Settings settings) {
-
-    }
-
-    @Override
-    void projectsLoaded(Gradle gradle) {
-
-    }
-
-    @Override
-    void projectsEvaluated(Gradle gradle) {
-
-    }
-
-    @Override
-    void buildFinished(BuildResult buildResult) {
-
-    }
-})
-
-//project相关api-----------------------------------------------------------
-//this.getProjects();
-def getProjects(){
-    println '----------------'
-    println 'root project'
-    println '----------------'
-
-//    this.getAllprojects().eachWithIndex{ Project project, int index ->
-//        if(index ==0){
-//            println "root project :${project.name}"
-//        }else{
-//            println "+------- project :${project.name}"
-//        }
-//    }
-
-    this.getSubprojects().eachWithIndex{ Project project, int index ->
-         println "+------- project :${project.name}"
-    }
-}
-
-//'kjplayer'的路径是相对于根工程的
-project('kjplayer'){Project project->
-    println "根工程中查找子工种"
-    println project.name
-
-    //因为这里是project ，所以project的相关方法都可以在这里使用
-    //可以把子工程中的所有配置都放到这里，然后把子工程中的配置都删除掉
-    /**
-    apply plugin: 'com.android.application'
-    group 'com.fimics'
-    version '1.0.0'
-    dependencies {
-
-    }
-
-    android{}
-     */
-}
-
-//不包括当前工程，只包含子工程
-subprojects {Project project->
-
-//    if(project.plugins.hasPlugin('com.android.library')){
-//        apply from: '../publishToMaven.gradle'
-//    }
-
-}
-
-//属性相关api
-
-/**
- *      project默认从build.gradle中读取配置
- *     String DEFAULT_BUILD_FILE = "build.gradle";
- *     路径分割符
- *     String PATH_SEPARATOR = ":";
- *     每个工程默认的输出文件夹
- *     String DEFAULT_BUILD_DIR_NAME = "build";
- *     String GRADLE_PROPERTIES = "gradle.properties";
- *     String SYSTEM_PROP_PREFIX = "systemProp";
- *     String DEFAULT_VERSION = "unspecified";
- *     String DEFAULT_STATUS = "release";
- */
-
-//文件相关api
-println "root path -> "+getRootDir().absolutePath
-println "build path -> "+getBuildDir().absolutePath
-println  "project path -> "+getProjectDir().absolutePath
-
-//println getContent('depends.gradle')
-//path 相对于当前project工程开始查找
-def getContent(String path){
-    try {
-        def file = file(path)
-        return file.text
-    }catch(GradleException e){
-        println "file not found..."
-    }
-    return null;
 }
