@@ -1,7 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.mic.kjplugin'
 }
+
+//apply plugin:'com.mic.kjplayer'
 
 // 赋值与引用
 def androids = rootProject.ext.android;
@@ -30,6 +33,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -37,7 +41,35 @@ android {
     dataBinding {
         enabled = true
     }
+
+//     sourceSets {
+//         main{
+//             jniLibs.srcDirs =['libs']//修改so库存放位置
+//         }
+//     }
+
+    //资源分模块 ，
+//    sourceSets{
+//        main{
+//            res.srcDirs =['src/main/res',
+//                          'src/main/res-ad',
+//                           'src/main/res-player'
+//                         ]
+//        }
+//    }
+
 }
+
+//sourceSets还可以放在android闭包外
+//this.android.sourceSets{
+//    main{
+//        res.srcDirs =['src/main/res',
+//                      'src/main/res-ad',
+//                      'src/main/res-player'
+//        ]
+//    }
+//}
+
 
 //为应用程序添加依赖
 dependencies {
@@ -74,7 +106,6 @@ dependencies {
     implementation project(path: ':annotation:nav_annotation')
     annotationProcessor project(':annotation:nav_processor')
     implementation project(':appcore')
-
 //    implementation depends.androidxcore
     //kotlin
     depends.kotlins.each {

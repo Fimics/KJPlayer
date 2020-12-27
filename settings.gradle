@@ -7,7 +7,6 @@ if(debug){
 }
 
 rootProject.name = "KJPlayer"
-
 include ':kjplayer'
 
 //annotation
