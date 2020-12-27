@@ -1,4 +1,4 @@
-package com.mic.kjplugin
+package com.mic.plugin
 
 import groovy.xml.MarkupBuilder
 import org.gradle.api.DefaultTask
@@ -10,7 +10,7 @@ import org.gradle.api.tasks.TaskAction
 class ReleaseInfoTask extends DefaultTask {
 
     ReleaseInfoTask() {
-        group = 'imooc'
+        group = 'fimics'
         description = 'update the release info'
     }
 
@@ -26,13 +26,13 @@ class ReleaseInfoTask extends DefaultTask {
     private void updateInfo() {
         //获取将要写入的信息
         String versionCodeMsg = project.extensions.
-                imoocReleaseInfo.versionCode
+                playerRelease.versionCode
         String versionNameMsg = project.extensions.
-                imoocReleaseInfo.versionName
+                playerRelease.versionName
         String versionInfoMsg = project.extensions.
-                imoocReleaseInfo.versionInfo
+                playerRelease.versionInfo
         String fileName = project.extensions.
-                imoocReleaseInfo.fileName
+                playerRelease.fileName
         def file = project.file(fileName)
         //将实体对象写入到xml文件中
         def sw = new StringWriter()

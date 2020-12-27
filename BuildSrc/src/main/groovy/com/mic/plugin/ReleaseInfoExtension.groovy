@@ -1,3 +1,4 @@
+package com.mic.plugin
 /**
  * 与自定义PLugin进行参数传递
  */

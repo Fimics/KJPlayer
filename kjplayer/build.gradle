@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'com.mic.kjplugin'
+    id 'com.mic.plugin'
 }
 
 //apply plugin:'com.mic.kjplayer'
@@ -113,3 +113,10 @@ dependencies {
     }
 }
 
+//使用自定义插件，并给playerRelease传递参数
+playerRelease{
+    versionCode = rootProject.ext.android.versionCode
+    versionName = rootProject.ext.android.versionName
+    versionInfo = '第88个版本。。。 新加gradle自定义插件功能'
+    fileName = 'releasesinfo.xml'
+}
