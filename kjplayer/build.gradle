@@ -15,6 +15,7 @@ android {
     compileSdkVersion androids.compileSdkVersion
     buildToolsVersion androids.buildToolsVersion
     defaultConfig {
+        manifestPlaceholders = [hostName:"www.mic.host.dev"]
         applicationId "com.mic.kjplayer"
         minSdkVersion androids.minSdkVersion
         targetSdkVersion androids.targetSdkVersion
@@ -23,10 +24,24 @@ android {
         testInstrumentationRunner depends.testrunner
     }
 
+//    signingConfigs {
+//        release {
+//            storeFile file("myreleasekey.keystore")
+//            storePassword "password"
+//            keyAlias "MyReleaseKey"
+//            keyPassword "password"
+//        }
+//    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            //如果您希望同一设备上同时具有调试版本和发布版本，这会很有用，因为两个 APK 不能具有相同的应用 ID
+            applicationIdSuffix ".debug"
         }
     }
     compileOptions {
@@ -45,6 +60,7 @@ android {
 //     sourceSets {
 //         main{
 //             jniLibs.srcDirs =['libs']//修改so库存放位置
+//             manifest.srcFile 'other/AndroidManifest.xml'
 //         }
 //     }
 
@@ -58,23 +74,41 @@ android {
 //        }
 //    }
 
+//    androidTest {
+//        setRoot 'src/tests'
+//    }
+
     // Specifies one flavor dimension.
+    // BUILD SUCCESSFUL in 4m 33s  没优化之前，assemable
     flavorDimensions "version"
     productFlavors {
-        demo {
-            // Assigns this product flavor to the "version" flavor dimension.
-            // If you are using only one dimension, this property is optional,
-            // and the plugin automatically assigns all the module's flavors to
-            // that dimension.
-            dimension "version"
-            applicationIdSuffix ".demo"
-            versionNameSuffix "-demo"
+        dev {
+            minSdkVersion 21
+            versionNameSuffix "-dev"
+            applicationIdSuffix '.dev'
+//            debuggable true
+//            initWith debug
+
         }
         full {
             dimension "version"
             applicationIdSuffix ".full"
             versionNameSuffix "-full"
         }
+
+        staging{
+//            initWith debug
+//            manifestPlaceholders = [hostName:"www.mic.host.staging"]
+            dimension "version"
+            applicationIdSuffix ".staging"
+            versionNameSuffix "-staging"
+        }
+
+//        release{
+//            dimension "version"
+//            applicationIdSuffix ".release"
+//            versionNameSuffix "-release"
+//        }
     }
 
 }
@@ -98,6 +132,7 @@ dependencies {
     testImplementation depends.junit
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
+    //关联gradle 源码
     implementation "com.android.tools.build:gradle:4.1.1"
 
 
@@ -142,6 +177,7 @@ playerRelease{
 }
 
 //./gradle projects
+//./gradlew cleanBuildCache
 this.afterEvaluate {
     this.android.applicationVariants.all{ variant ->
         def name = variant.name
@@ -157,6 +193,7 @@ this.afterEvaluate {
 //                apkName)
 //        println output.outputFile.name
 
+        //获取到变体的task
         def task = variant.checkManifest
         println task.name
     }
