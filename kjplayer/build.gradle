@@ -58,6 +58,25 @@ android {
 //        }
 //    }
 
+    // Specifies one flavor dimension.
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            // Assigns this product flavor to the "version" flavor dimension.
+            // If you are using only one dimension, this property is optional,
+            // and the plugin automatically assigns all the module's flavors to
+            // that dimension.
+            dimension "version"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+        }
+        full {
+            dimension "version"
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+        }
+    }
+
 }
 
 //sourceSets还可以放在android闭包外
@@ -79,6 +98,7 @@ dependencies {
     testImplementation depends.junit
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
+    implementation "com.android.tools.build:gradle:4.1.1"
 
 
     //错误收集
@@ -119,4 +139,25 @@ playerRelease{
     versionName = rootProject.ext.android.versionName
     versionInfo = '第88个版本。。。 新加gradle自定义插件功能'
     fileName = 'releasesinfo.xml'
+}
+
+//./gradle projects
+this.afterEvaluate {
+    this.android.applicationVariants.all{ variant ->
+        def name = variant.name
+        def baseName = variant.baseName
+        println "the name is:${name} "+"the baseName is:${baseName}"
+    }
+
+    this.android.applicationVariants.all { variant ->
+//        def output = variant.outputs.first()
+//        def apkName = "app-${variant.baseName}" +
+//                "-${variant.versionName}.apk"
+//        output.outputFile = new File(output.outputFile.parent,
+//                apkName)
+//        println output.outputFile.name
+
+        def task = variant.checkManifest
+        println task.name
+    }
 }
