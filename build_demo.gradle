@@ -14,32 +14,35 @@ this.gradle.buildFinished {
 //设置监听器监听生命周期
 this.gradle.beforeProject {}
 this.gradle.afterProject {}
-this.gradle.addBuildListener(new BuildListener() {
-    @Override
-    void buildStarted(Gradle gradle) {
-
-    }
-
-    @Override
-    void settingsEvaluated(Settings settings) {
-
-    }
-
-    @Override
-    void projectsLoaded(Gradle gradle) {
-
-    }
-
-    @Override
-    void projectsEvaluated(Gradle gradle) {
-
-    }
-
-    @Override
-    void buildFinished(BuildResult buildResult) {
-
-    }
-})
+//this.gradle.addBuildListener(new BuildListener() {
+//
+//
+//    @Override
+//    void buildStarted(Gradle gradle) {
+//
+//    }
+//
+//    @Override
+//    void settingsEvaluated(Settings settings) {
+//
+//    }
+//
+//    @Override
+//    void projectsLoaded(Gradle gradle) {
+//
+//    }
+//
+//    @Override
+//    void projectsEvaluated(Gradle gradle) {
+//
+//    }
+//
+//    @Override
+//    void buildFinished(BuildResult result) {
+//
+//    }
+//
+//})
 
 //project相关api-----------------------------------------------------------
 //this.getProjects();
@@ -93,7 +96,7 @@ subprojects {Project project->
 
 /**
  *      project默认从build.gradle中读取配置
- *     String DEFAULT_BUILD_FILE = "build.gradle";
+ *     String DEFAULT_BUILD_FILE = "build.gradle.kts";
  *     路径分割符
  *     String PATH_SEPARATOR = ":";
  *     每个工程默认的输出文件夹

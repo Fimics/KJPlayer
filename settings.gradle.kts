@@ -1,0 +1,21 @@
+println ("初始化阶段开始...")
+//def debug = true
+//if(debug){
+//    gradle.ext.exoplayerRoot = 'submodule/ExoPlayer'
+////    gradle.ext.exoplayerModulePrefix = 'exoplayer-'
+//    apply from: new File(gradle.ext.exoplayerRoot, 'core_settings.gradle')
+//}
+//
+//rootProject.name = "KJPlayer"
+//include ':kjplayer'
+//
+////annotation
+//include ':annotation:nav_annotation'
+//include ':annotation:nav_processor'
+//
+//include ':appcore'
+
+
+rootProject.name="KJPlayer"
+rootProject.buildFileName="build.gradle.kts"
+include (":AiVoice")
