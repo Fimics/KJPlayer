@@ -198,3 +198,5 @@ this.afterEvaluate {
         println task.name
     }
 }
+
+//./gradlew --stop 秒婷编译
