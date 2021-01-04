@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.mic.kjplayer",
+  "applicationId": "com.mic.aivoice",
   "variantName": "processReleaseResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "versionCode": 1,
-      "versionName": "1.0.0",
-      "outputFile": "kjplayer-release.apk"
+      "versionName": "1.0",
+      "outputFile": "AiVoice-release.apk"
     }
   ]
 }
