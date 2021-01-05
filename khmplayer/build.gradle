@@ -3,16 +3,22 @@ plugins {
     id 'kotlin-android'
 }
 
+// 赋值与引用
+def androids = rootProject.ext.android;
+def depends = rootProject.ext.dependencies;
+def kotlins = rootProject.ext.kotlins
+
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion androids.compileSdkVersion
+    buildToolsVersion androids.buildToolsVersion
 
     defaultConfig {
         applicationId "com.mic.khmplayer"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion androids.minSdkVersion
+        targetSdkVersion androids.targetSdkVersion
+        versionCode androids.versionCode
+        versionName androids.versionName
+        testInstrumentationRunner depends.testrunner
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,12 +40,12 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation kotlins.kotlinstdlib
+    implementation kotlins.corektx
+    implementation depends.appcompat
+    implementation depends.material
+    implementation depends.constraint
+    testImplementation depends.junit
+    androidTestImplementation depends.junitandroidx
+    androidTestImplementation depends.espresso
 }
