@@ -133,7 +133,7 @@ dependencies {
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
     //关联gradle 源码
-    implementation "com.android.tools.build:gradle:4.1.1"
+//    implementation "com.android.tools.build:gradle:4.1.1"
 
 
     //错误收集
