@@ -10,7 +10,6 @@
 
 //依赖配置的核心功能
 buildscript {
-    val kotlin_version = "1.4.20"
     //工程的创库地址
     repositories {
         google()
@@ -27,8 +26,8 @@ buildscript {
 
     //插件的依赖地址
     dependencies {
-        classpath ("com.android.tools.build:gradle:4.1.1")
-        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath ("com.android.tools.build:gradle:${BuildConst.gradle_version}")
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:${BuildConst.kotlin_version}")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

@@ -55,8 +55,8 @@ ext {
             'rxpermissions2'           : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar',
 
             //数据
-            'retrofit'                 : 'com.squareup.retrofit2:retrofit:2.3.0',
-            'convertergson'            : 'com.squareup.retrofit2:converter-gson:2.3.0',
+            'retrofit'                 : 'com.squareup.retrofit2:retrofit:2.8.1',
+            'convertergson'            : 'com.squareup.retrofit2:converter-gson:2.8.1',
             'gson'                     : 'com.google.code.gson:gson:2.6.2',
 
             //auto-service
