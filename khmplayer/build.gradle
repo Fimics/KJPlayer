@@ -49,7 +49,9 @@ dependencies {
     androidTestImplementation depends.junitandroidx
     androidTestImplementation depends.espresso
 
+//    implementation(':appcpre')
+
     //anko 已经废弃 需要用jetpack 库替换
     //https://github.com/Kotlin/anko
-    implementation "org.jetbrains.anko:anko:0.10.8"
+//    implementation "org.jetbrains.anko:anko:0.10.8"
 }

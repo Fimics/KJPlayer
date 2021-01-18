@@ -1,30 +1,40 @@
 package com.mic.khmplayer.base
 
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
-import org.jetbrains.anko.toast
 
-abstract class BaseActivity : AppCompatActivity(),AnkoLogger{
+abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (isFullScreen()) {
+            //全屏设置
+            //全屏设置
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            }
+        }
         setContentView(getLayoutId())
         initListener()
         initData()
-        debug { "BaseActivity" }
     }
 
     open abstract fun getLayoutId(): Int
 
-    protected fun initListener() {}
+    open protected fun initListener() {}
 
-    protected fun initData() {}
+    open protected fun initData() {}
 
 
-    protected fun myToast(msg:String){
-        runOnUiThread { toast(msg) }
+    open abstract fun isFullScreen(): Boolean
+
+    inline fun <reified T : BaseActivity> startActivity() {
+        val intent = Intent(this, T::class.java)
+        this.startActivity(intent)
+        this.finish()
     }
 
 }
